@@ -13,6 +13,9 @@
 		9B2D6BA616244E730038A459 /* DetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D6BA516244E730038A459 /* DetailListViewController.m */; };
 		9B2D6BA716244FA00038A459 /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D6B9916244AF20038A459 /* DataListViewController.m */; };
 		9B2D6BA816244FAD0038A459 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D6B9716244AF20038A459 /* CustomCell.m */; };
+		9B499916163936B7000A24DA /* WineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B499915163936B7000A24DA /* WineViewController.m */; };
+		9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B49991B163936EF000A24DA /* bouteille@2x.png */; };
+		9B49991E16393726000A24DA /* mabout.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B49991D16393726000A24DA /* mabout.png */; };
 		9BFC82CF16392F70000C1600 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82CE16392F70000C1600 /* iCarousel.m */; };
 		9BFC82D516392F7D000C1600 /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82D216392F7D000C1600 /* LBYouTubePlayerController.m */; };
 		9BFC82D616392F7D000C1600 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82D416392F7D000C1600 /* LBYouTubePlayerViewController.m */; };
@@ -22,6 +25,7 @@
 		9BFC82EC163930CF000C1600 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC82EB163930CF000C1600 /* Default-568h@2x.png */; };
 		9BFC82EE163930F2000C1600 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFC82ED163930F2000C1600 /* QuartzCore.framework */; };
 		9BFC82F016393108000C1600 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFC82EF16393108000C1600 /* MediaPlayer.framework */; };
+		9BFC82FA163933F4000C1600 /* bouteille.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC82F9163933F4000C1600 /* bouteille.png */; };
 		E03C9810151A86590004D2FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03C980F151A86590004D2FD /* UIKit.framework */; };
 		E03C9812151A86590004D2FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03C9811151A86590004D2FD /* Foundation.framework */; };
 		E03C9814151A86590004D2FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03C9813151A86590004D2FD /* CoreGraphics.framework */; };
@@ -55,6 +59,10 @@
 		9B2D6BA216244E250038A459 /* DetailListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailListViewController.xib; sourceTree = "<group>"; };
 		9B2D6BA416244E4D0038A459 /* DetailListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailListViewController.h; sourceTree = "<group>"; };
 		9B2D6BA516244E730038A459 /* DetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailListViewController.m; sourceTree = "<group>"; };
+		9B4999141639369F000A24DA /* WineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WineViewController.h; sourceTree = "<group>"; };
+		9B499915163936B7000A24DA /* WineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineViewController.m; sourceTree = "<group>"; };
+		9B49991B163936EF000A24DA /* bouteille@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouteille@2x.png"; sourceTree = "<group>"; };
+		9B49991D16393726000A24DA /* mabout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mabout.png; sourceTree = "<group>"; };
 		9BFC82CD16392F70000C1600 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		9BFC82CE16392F70000C1600 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		9BFC82D116392F7D000C1600 /* LBYouTubePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerController.h; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 		9BFC82EB163930CF000C1600 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9BFC82ED163930F2000C1600 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9BFC82EF16393108000C1600 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		9BFC82F9163933F4000C1600 /* bouteille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouteille.png; sourceTree = "<group>"; };
 		E03C980B151A86590004D2FD /* Projet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03C980F151A86590004D2FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E03C9811151A86590004D2FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +133,7 @@
 		9BFC82CA16392F44000C1600 /* MSToolTips */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC82F516393310000C1600 /* WineView */,
 				9BFC82D716392F98000C1600 /* Download */,
 				9BFC82D016392F7D000C1600 /* LBYouTubePlayerController */,
 				9BFC82CC16392F70000C1600 /* iCarousel */,
@@ -186,11 +196,21 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		9BFC82F516393310000C1600 /* WineView */ = {
+			isa = PBXGroup;
+			children = (
+				9B49991D16393726000A24DA /* mabout.png */,
+				9B49991B163936EF000A24DA /* bouteille@2x.png */,
+				9B499915163936B7000A24DA /* WineViewController.m */,
+				9B4999141639369F000A24DA /* WineViewController.h */,
+				9BFC82F9163933F4000C1600 /* bouteille.png */,
+			);
+			name = WineView;
+			sourceTree = "<group>";
+		};
 		E03C9800151A86590004D2FD = {
 			isa = PBXGroup;
 			children = (
-				9BFC82EF16393108000C1600 /* MediaPlayer.framework */,
-				9BFC82ED163930F2000C1600 /* QuartzCore.framework */,
 				9BFC82EB163930CF000C1600 /* Default-568h@2x.png */,
 				9BFC82CA16392F44000C1600 /* MSToolTips */,
 				E03C9815151A86590004D2FD /* TabBar */,
@@ -211,6 +231,8 @@
 		E03C980E151A86590004D2FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC82ED163930F2000C1600 /* QuartzCore.framework */,
+				9BFC82EF16393108000C1600 /* MediaPlayer.framework */,
 				E03C980F151A86590004D2FD /* UIKit.framework */,
 				E03C9811151A86590004D2FD /* Foundation.framework */,
 				E03C9813151A86590004D2FD /* CoreGraphics.framework */,
@@ -340,6 +362,9 @@
 				9BFC82E316393058000C1600 /* CHANGELOG.md in Resources */,
 				9BFC82E516393058000C1600 /* README.md in Resources */,
 				9BFC82EC163930CF000C1600 /* Default-568h@2x.png in Resources */,
+				9BFC82FA163933F4000C1600 /* bouteille.png in Resources */,
+				9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */,
+				9B49991E16393726000A24DA /* mabout.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +391,7 @@
 				9BFC82D516392F7D000C1600 /* LBYouTubePlayerController.m in Sources */,
 				9BFC82D616392F7D000C1600 /* LBYouTubePlayerViewController.m in Sources */,
 				9BFC82E416393058000C1600 /* JSONKit.m in Sources */,
+				9B499916163936B7000A24DA /* WineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

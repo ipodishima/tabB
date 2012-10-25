@@ -14,6 +14,7 @@
 #import "FourthViewController.h"
 #import "FifthViewController.h"
 #import "SixthViewController.h"
+#import "WineViewController.h"
 
 @implementation AppDelegate
 
@@ -26,8 +27,18 @@
 
     self.tabBarController = [[UITabBarController alloc] init];
     
-   FirstViewController *firstViewController = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    firstViewController.title = @"Vins";
+ //  FirstViewController *firstViewController = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+//    firstViewController.title = @"Vins";
+    
+    WineViewController *wineVC = [[WineViewController alloc] init];
+    UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Wine"
+                                                              image:nil
+                                                                tag:2];
+    wineVC.tabBarItem = tabBarItem3;
+
+    
+    
+    
     
     UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"List"
                                                               image:nil
@@ -60,7 +71,7 @@
     sixthViewController.tabBarItem = tabBarItemSixth;
     
     _tabBarController.viewControllers = [NSArray arrayWithObjects: navController,
-                                         firstViewController, navigationController, thirdViewController, fourthViewController, fifthViewController, sixthViewController, nil];
+                                         wineVC, navigationController, thirdViewController, fourthViewController, fifthViewController, sixthViewController, nil];
     
     [_tabBarController.tabBar setSelectedImageTintColor:[UIColor grayColor]];
     
