@@ -1,0 +1,3 @@
+[submodule "MSToolTips"]
+	path = MSToolTips
+	url = https://github.com/ipodishima/MSToolTips.git
