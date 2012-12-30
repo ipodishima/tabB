@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
-
-@interface WineViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
+#import "DownloadManager.h"
+@interface WineViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,DownloadDelegate>
 {
     iCarousel *_carousel;
     UITextView *_textView;
+     NSMutableArray *_arrayOfContacts;
 }
 @end

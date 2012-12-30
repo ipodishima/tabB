@@ -54,7 +54,7 @@
     // on parcourt le tableau des controleurs
     UIViewController *controllerToSelect = nil;
     for (UIViewController *controller in tabController.viewControllers)
-        if([controller isKindOfClass:NSClassFromString(@"FirstViewController")])
+        if([controller isKindOfClass:NSClassFromString(@"DataListViewController")])
         {
             controllerToSelect = controller;
             break; // on sort de la boucle

@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad
 {
+    self.title=@"List";
     _dataToShow = [[NSArray alloc] initWithObjects:@"Mon Profil", @"Videos", @"A propos", nil];
     _dataToDraw = [[NSArray alloc] initWithObjects: @"17-bar-chart.png",@"17-bar-chart.png",@"17-bar-chart.png", nil];
     [super viewDidLoad];

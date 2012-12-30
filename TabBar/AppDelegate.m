@@ -50,6 +50,9 @@
     navController.tabBarItem = tabBarItem1;
 
    
+    UINavigationController *winenavigationController = [[UINavigationController alloc] initWithRootViewController:wineVC];
+    winenavigationController.title= @"Wine2";
+    [winenavigationController setNavigationBarHidden:NO];
     
     SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];                 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
@@ -71,7 +74,7 @@
     sixthViewController.tabBarItem = tabBarItemSixth;
     
     _tabBarController.viewControllers = [NSArray arrayWithObjects: navController,
-                                         wineVC, navigationController, thirdViewController, fourthViewController, fifthViewController, sixthViewController, nil];
+                                         winenavigationController, navigationController, thirdViewController, fourthViewController, fifthViewController, sixthViewController, nil];
     
     [_tabBarController.tabBar setSelectedImageTintColor:[UIColor grayColor]];
     

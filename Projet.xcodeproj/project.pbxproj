@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822FC9E51690D918007FE93C /* SampleLoad.json in Resources */ = {isa = PBXBuildFile; fileRef = 822FC9E41690D918007FE93C /* SampleLoad.json */; };
+		82E112EA1690CC1200E7AD69 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DA16392FC7000C1600 /* DownloadManager.m */; };
+		82E112EC1690CC4C00E7AD69 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DC16392FC7000C1600 /* DownloadOperation.m */; };
+		82E112F61690CDA900E7AD69 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E112F51690CDA900E7AD69 /* Contact.m */; };
 		9B04F52A1624659500B0EA4D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F5281624659500B0EA4D /* ProfileViewController.m */; };
 		9B04F52B1624659500B0EA4D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B04F5291624659500B0EA4D /* ProfileViewController.xib */; };
 		9B2D6BA316244E250038A459 /* DetailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2D6BA216244E250038A459 /* DetailListViewController.xib */; };
@@ -49,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		822FC9E41690D918007FE93C /* SampleLoad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleLoad.json; path = MSToolTips/MSToolTips/SampleLoad.json; sourceTree = "<group>"; };
+		82E112E01690C47100E7AD69 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = MSToolTips/MSToolTips/Contact.h; sourceTree = "<group>"; };
+		82E112F51690CDA900E7AD69 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = MSToolTips/MSToolTips/Contact.m; sourceTree = "<group>"; };
 		9B04F5271624659500B0EA4D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		9B04F5281624659500B0EA4D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		9B04F5291624659500B0EA4D /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -133,7 +140,6 @@
 		9BFC82CA16392F44000C1600 /* MSToolTips */ = {
 			isa = PBXGroup;
 			children = (
-				9BFC82F516393310000C1600 /* WineView */,
 				9BFC82D716392F98000C1600 /* Download */,
 				9BFC82D016392F7D000C1600 /* LBYouTubePlayerController */,
 				9BFC82CC16392F70000C1600 /* iCarousel */,
@@ -199,6 +205,9 @@
 		9BFC82F516393310000C1600 /* WineView */ = {
 			isa = PBXGroup;
 			children = (
+				82E112F51690CDA900E7AD69 /* Contact.m */,
+				822FC9E41690D918007FE93C /* SampleLoad.json */,
+				82E112E01690C47100E7AD69 /* Contact.h */,
 				9B49991D16393726000A24DA /* mabout.png */,
 				9B49991B163936EF000A24DA /* bouteille@2x.png */,
 				9B499915163936B7000A24DA /* WineViewController.m */,
@@ -206,6 +215,7 @@
 				9BFC82F9163933F4000C1600 /* bouteille.png */,
 			);
 			name = WineView;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E03C9800151A86590004D2FD = {
@@ -243,6 +253,7 @@
 		E03C9815151A86590004D2FD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC82F516393310000C1600 /* WineView */,
 				E03C981E151A86590004D2FD /* AppDelegate.h */,
 				E03C981F151A86590004D2FD /* AppDelegate.m */,
 				E03C9816151A86590004D2FD /* Supporting Files */,
@@ -365,6 +376,7 @@
 				9BFC82FA163933F4000C1600 /* bouteille.png in Resources */,
 				9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */,
 				9B49991E16393726000A24DA /* mabout.png in Resources */,
+				822FC9E51690D918007FE93C /* SampleLoad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E112EC1690CC4C00E7AD69 /* DownloadOperation.m in Sources */,
+				82E112EA1690CC1200E7AD69 /* DownloadManager.m in Sources */,
 				E03C981C151A86590004D2FD /* main.m in Sources */,
 				E03C9820151A86590004D2FD /* AppDelegate.m in Sources */,
 				E03C9829151A866F0004D2FD /* FirstViewController.m in Sources */,
@@ -392,6 +406,7 @@
 				9BFC82D616392F7D000C1600 /* LBYouTubePlayerViewController.m in Sources */,
 				9BFC82E416393058000C1600 /* JSONKit.m in Sources */,
 				9B499916163936B7000A24DA /* WineViewController.m in Sources */,
+				82E112F61690CDA900E7AD69 /* Contact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
