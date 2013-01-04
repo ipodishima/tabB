@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		822FC9E51690D918007FE93C /* SampleLoad.json in Resources */ = {isa = PBXBuildFile; fileRef = 822FC9E41690D918007FE93C /* SampleLoad.json */; };
+		829417BC1691D2C3002F326D /* DetailWineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829417BA1691D2C3002F326D /* DetailWineViewController.m */; };
+		829417BD1691D2C3002F326D /* DetailWineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829417BB1691D2C3002F326D /* DetailWineViewController.xib */; };
+		82CDF14B16934EA500EA87AB /* vin.json in Resources */ = {isa = PBXBuildFile; fileRef = 82CDF14A16934EA500EA87AB /* vin.json */; };
+		82CDF14C1693502100EA87AB /* Wine.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDF14816934E8500EA87AB /* Wine.m */; };
 		82E112EA1690CC1200E7AD69 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DA16392FC7000C1600 /* DownloadManager.m */; };
 		82E112EC1690CC4C00E7AD69 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DC16392FC7000C1600 /* DownloadOperation.m */; };
 		82E112F61690CDA900E7AD69 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E112F51690CDA900E7AD69 /* Contact.m */; };
+		82EF10C3169359B100E913B8 /* julienas-2011-remi-paola-benon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82EF10C1169359B100E913B8 /* julienas-2011-remi-paola-benon.jpg */; };
+		82EF10C816935C1100E913B8 /* carignanissime-de-centeilles-2009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82EF10C716935C1100E913B8 /* carignanissime-de-centeilles-2009.jpg */; };
 		9B04F52A1624659500B0EA4D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F5281624659500B0EA4D /* ProfileViewController.m */; };
 		9B04F52B1624659500B0EA4D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B04F5291624659500B0EA4D /* ProfileViewController.xib */; };
 		9B2D6BA316244E250038A459 /* DetailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2D6BA216244E250038A459 /* DetailListViewController.xib */; };
@@ -54,8 +60,16 @@
 
 /* Begin PBXFileReference section */
 		822FC9E41690D918007FE93C /* SampleLoad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleLoad.json; path = MSToolTips/MSToolTips/SampleLoad.json; sourceTree = "<group>"; };
+		829417B91691D2C3002F326D /* DetailWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWineViewController.h; sourceTree = "<group>"; };
+		829417BA1691D2C3002F326D /* DetailWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWineViewController.m; sourceTree = "<group>"; };
+		829417BB1691D2C3002F326D /* DetailWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailWineViewController.xib; sourceTree = "<group>"; };
+		82CDF14716934E8500EA87AB /* Wine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
+		82CDF14816934E8500EA87AB /* Wine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
+		82CDF14A16934EA500EA87AB /* vin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vin.json; sourceTree = "<group>"; };
 		82E112E01690C47100E7AD69 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = MSToolTips/MSToolTips/Contact.h; sourceTree = "<group>"; };
 		82E112F51690CDA900E7AD69 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = MSToolTips/MSToolTips/Contact.m; sourceTree = "<group>"; };
+		82EF10C1169359B100E913B8 /* julienas-2011-remi-paola-benon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "julienas-2011-remi-paola-benon.jpg"; sourceTree = "<group>"; };
+		82EF10C716935C1100E913B8 /* carignanissime-de-centeilles-2009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carignanissime-de-centeilles-2009.jpg"; sourceTree = "<group>"; };
 		9B04F5271624659500B0EA4D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		9B04F5281624659500B0EA4D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		9B04F5291624659500B0EA4D /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -205,9 +219,14 @@
 		9BFC82F516393310000C1600 /* WineView */ = {
 			isa = PBXGroup;
 			children = (
-				82E112F51690CDA900E7AD69 /* Contact.m */,
-				822FC9E41690D918007FE93C /* SampleLoad.json */,
+				82EF10C1169359B100E913B8 /* julienas-2011-remi-paola-benon.jpg */,
+				82CDF14716934E8500EA87AB /* Wine.h */,
+				82EF10C716935C1100E913B8 /* carignanissime-de-centeilles-2009.jpg */,
 				82E112E01690C47100E7AD69 /* Contact.h */,
+				82CDF14816934E8500EA87AB /* Wine.m */,
+				82E112F51690CDA900E7AD69 /* Contact.m */,
+				82CDF14A16934EA500EA87AB /* vin.json */,
+				822FC9E41690D918007FE93C /* SampleLoad.json */,
 				9B49991D16393726000A24DA /* mabout.png */,
 				9B49991B163936EF000A24DA /* bouteille@2x.png */,
 				9B499915163936B7000A24DA /* WineViewController.m */,
@@ -280,6 +299,9 @@
 				9B2D6B9816244AF20038A459 /* DataListViewController.h */,
 				9B2D6B9916244AF20038A459 /* DataListViewController.m */,
 				9B04F5271624659500B0EA4D /* ProfileViewController.h */,
+				829417B91691D2C3002F326D /* DetailWineViewController.h */,
+				829417BA1691D2C3002F326D /* DetailWineViewController.m */,
+				829417BB1691D2C3002F326D /* DetailWineViewController.xib */,
 				9B04F5281624659500B0EA4D /* ProfileViewController.m */,
 				9B04F5291624659500B0EA4D /* ProfileViewController.xib */,
 				9B2D6BA216244E250038A459 /* DetailListViewController.xib */,
@@ -377,6 +399,10 @@
 				9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */,
 				9B49991E16393726000A24DA /* mabout.png in Resources */,
 				822FC9E51690D918007FE93C /* SampleLoad.json in Resources */,
+				829417BD1691D2C3002F326D /* DetailWineViewController.xib in Resources */,
+				82CDF14B16934EA500EA87AB /* vin.json in Resources */,
+				82EF10C3169359B100E913B8 /* julienas-2011-remi-paola-benon.jpg in Resources */,
+				82EF10C816935C1100E913B8 /* carignanissime-de-centeilles-2009.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CDF14C1693502100EA87AB /* Wine.m in Sources */,
 				82E112EC1690CC4C00E7AD69 /* DownloadOperation.m in Sources */,
 				82E112EA1690CC1200E7AD69 /* DownloadManager.m in Sources */,
 				E03C981C151A86590004D2FD /* main.m in Sources */,
@@ -407,6 +434,7 @@
 				9BFC82E416393058000C1600 /* JSONKit.m in Sources */,
 				9B499916163936B7000A24DA /* WineViewController.m in Sources */,
 				82E112F61690CDA900E7AD69 /* Contact.m in Sources */,
+				829417BC1691D2C3002F326D /* DetailWineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

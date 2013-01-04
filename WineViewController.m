@@ -8,7 +8,8 @@
 //
 
 #import "WineViewController.h"
-#import "Contact.h"
+#import "Wine.h"
+#import "DetailWineViewController.h"
 @interface WineOverlayView : UIView
 
 @end
@@ -32,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     [[DownloadManager shared] loadLocalFileName:@"SampleLoad" withDelegate:self];
+     [[DownloadManager shared] loadLocalFileName:@"vin" withDelegate:self];
     
     self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     self.title = @"Wine";
@@ -56,11 +57,29 @@
     _textView.font = [UIFont boldSystemFontOfSize:15.0];
     _textView.editable = false;
     [self.view addSubview:_textView];
+       
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setFrame:CGRectMake(10, 180, 280, 30)];
+    [button setTitle:@"Details" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(selectDetailWineController:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+- (void) selectDetailWineController:(id)sender
+{
+    Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
+   
+
+    DetailWineViewController *detailWineViewController =[[DetailWineViewController alloc] initWithNibName:@"DetailWineViewController" bundle:nil];
+     
+    
+    detailWineViewController.texteAAfficher = w.name;
+    detailWineViewController.title = w.name;
+    [self.navigationController pushViewController:detailWineViewController animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -71,7 +90,7 @@
 
 - (void) downloadOperation:(DownloadOperation *)operation didFailWithError:(NSError *)error
 {
-    // Stop activity indicator
+    // Stop activity indicator	
     NSLog(@"%@", error);
     // Todo : handle the error
 }
@@ -91,17 +110,20 @@
     for (NSDictionary *dic in object)
     {
         // Create a new contact
-        Contact *c = [Contact new];
+        Wine *w = [Wine new];
         
         // Set its properties from JSON 'object'
-        c.firstName = [dic objectForKey:@"FirstName"];
-        c.lastName = [dic objectForKey:@"LastName"];
-        c.job = [dic objectForKey:@"Job"];
-        c.age = [[dic objectForKey:@"Age"] integerValue];
+        w.name = [dic objectForKey:@"name"];
+        w.domaine = [dic objectForKey:@"domaine"];
+        w.apropos = [dic objectForKey:@"apropos"];
+        w.age = [dic objectForKey:@"age"]  ;
         // Add it to the array
-        [_arrayOfContacts addObject:c];
+        [_arrayOfContacts addObject:w];
         
     }
+    [_carousel reloadData];
+    Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
+    _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String ]];
     
     // Try these
     // [_arrayOfContacts sortUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES]]];
@@ -115,7 +137,7 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return 10 /*This is where you will set count values from server response*/;
+    return _arrayOfContacts.count;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
@@ -124,7 +146,7 @@
     if (view == nil)
     {
     
-        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bouteille.png"]];
+        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carignanissime-de-centeilles-2009.jpg"]];
         if (index == 0)
         {
             view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mabout.png.png"]];
@@ -145,8 +167,8 @@
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel;
 {
     if(_arrayOfContacts.count !='O'){
-         Contact *c = [_arrayOfContacts objectAtIndex:carousel.currentItemIndex];
-        _textView.text = [NSString stringWithFormat:@"This is where you should place the text from the bottle. Current index is %d %s", carousel.currentItemIndex,[c.firstName UTF8String]];
+         Wine *w = [_arrayOfContacts objectAtIndex:carousel.currentItemIndex];
+        _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String]];
     }
     
 }
