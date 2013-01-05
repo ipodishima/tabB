@@ -1,3 +1,6 @@
 [submodule "MSToolTips"]
 	path = MSToolTips
 	url = https://github.com/ipodishima/MSToolTips.git
+[submodule "SDWebImage"]
+	path = SDWebImage
+	url = git://github.com/rs/SDWebImage.git

@@ -149,8 +149,10 @@
     {
         if([_arrayOfContacts count ] != 0){
             Wine *w = [_arrayOfContacts objectAtIndex:index];
-              view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:w.image]];
-           // view = [[UIImageView alloc] initWithImage:[UIImage
+            UIImageView *imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+            [imageView setImageWithURL:[NSURL URLWithString:w.image]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+                    view = imageView;
 
         }
         else {
@@ -161,8 +163,7 @@
     }
 
     
-    // Use for example SDWebImageView to load the image from internet in an asynchronous way
-    
+       
     return view;
 }
 
