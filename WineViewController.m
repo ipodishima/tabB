@@ -10,6 +10,7 @@
 #import "WineViewController.h"
 #import "Wine.h"
 #import "DetailWineViewController.h"
+#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 @interface WineOverlayView : UIView
 
 @end
@@ -117,6 +118,7 @@
         w.domaine = [dic objectForKey:@"domaine"];
         w.apropos = [dic objectForKey:@"apropos"];
         w.age = [dic objectForKey:@"age"]  ;
+        w.image = [dic objectForKey:@"image"]  ;
         // Add it to the array
         [_arrayOfContacts addObject:w];
         
@@ -145,11 +147,16 @@
     //create new view if no view is available for recycling
     if (view == nil)
     {
-    
-        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carignanissime-de-centeilles-2009.jpg"]];
-        if (index == 0)
-        {
-            view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mabout.png.png"]];
+        if([_arrayOfContacts count ] != 0){
+            Wine *w = [_arrayOfContacts objectAtIndex:index];
+              view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:w.image]];
+           // view = [[UIImageView alloc] initWithImage:[UIImage
+
+        }
+        else {
+            
+                view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mabout.png.png"]];
+             
         }
     }
 
@@ -166,7 +173,7 @@
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel;
 {
-    if(_arrayOfContacts.count !='O'){
+    if([_arrayOfContacts count ] != 0){
          Wine *w = [_arrayOfContacts objectAtIndex:carousel.currentItemIndex];
         _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String]];
     }
