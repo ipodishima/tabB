@@ -224,6 +224,7 @@
 		82FE496616A2C836002CA8E2 /* DetailWineView */ = {
 			isa = PBXGroup;
 			children = (
+				9B49991D16393726000A24DA /* mabout.png */,
 				829417B91691D2C3002F326D /* DetailWineViewController.h */,
 				829417BA1691D2C3002F326D /* DetailWineViewController.m */,
 				829417BB1691D2C3002F326D /* DetailWineViewController.xib */,
@@ -305,7 +306,6 @@
 				82CDF14816934E8500EA87AB /* Wine.m */,
 				82E112F51690CDA900E7AD69 /* Contact.m */,
 				82CDF14A16934EA500EA87AB /* vin.json */,
-				9B49991D16393726000A24DA /* mabout.png */,
 				9B49991B163936EF000A24DA /* bouteille@2x.png */,
 				9B499915163936B7000A24DA /* WineViewController.m */,
 				9B4999141639369F000A24DA /* WineViewController.h */,

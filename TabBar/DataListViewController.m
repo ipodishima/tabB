@@ -81,7 +81,8 @@
     
        
          UIImage *image = [UIImage imageNamed:[_dataToDraw objectAtIndex:[indexPath row]]];
-       
+    
+   // cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.imageView.image = image;
 
     cell.myLabel.text = [_dataToShow objectAtIndex:[indexPath row]];
@@ -133,7 +134,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+  //  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  //  cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
   
     
     switch (indexPath.row ) {

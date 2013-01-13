@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Wine.h"
+#import "../SDWebImage/SDWebImage/UIImageView+WebCache.h"
+
 
 @interface DetailWineViewController : UIViewController
 {
       UILabel *_label;
     UILabel *_labelage;
+        UILabel *_labeldom;
     Wine *wineAAfficher;
     UITextView *_textView;
 
