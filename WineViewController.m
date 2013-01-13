@@ -76,9 +76,8 @@
    
 
     DetailWineViewController *detailWineViewController =[[DetailWineViewController alloc] initWithNibName:@"DetailWineViewController" bundle:nil];
-     
-    
-    detailWineViewController.texteAAfficher = w.name;
+    detailWineViewController.texteAAfficher = w.apropos;
+    detailWineViewController.wineAAfficher = w;
     detailWineViewController.title = w.name;
     [self.navigationController pushViewController:detailWineViewController animated:YES];
 }

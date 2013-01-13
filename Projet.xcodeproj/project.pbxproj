@@ -15,7 +15,6 @@
 		82063BB21698CC1800C09A40 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BA81698CC1800C09A40 /* SDWebImagePrefetcher.m */; };
 		82063BB31698CC1800C09A40 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BAA1698CC1800C09A40 /* UIButton+WebCache.m */; };
 		82063BB41698CC1800C09A40 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BAC1698CC1800C09A40 /* UIImageView+WebCache.m */; };
-		822FC9E51690D918007FE93C /* SampleLoad.json in Resources */ = {isa = PBXBuildFile; fileRef = 822FC9E41690D918007FE93C /* SampleLoad.json */; };
 		824DC0CD169B527600FD0448 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DC0CC169B527600FD0448 /* FacebookSDK.framework */; };
 		824DC0D7169B532800FD0448 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DC0D6169B532800FD0448 /* Accounts.framework */; };
 		824DC0D9169B537300FD0448 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824DC0D8169B537300FD0448 /* FacebookSDKResources.bundle */; };
@@ -92,14 +91,13 @@
 		82063BAA1698CC1800C09A40 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		82063BAB1698CC1800C09A40 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		82063BAC1698CC1800C09A40 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		822FC9E41690D918007FE93C /* SampleLoad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleLoad.json; path = MSToolTips/MSToolTips/SampleLoad.json; sourceTree = "<group>"; };
 		824DC0CC169B527600FD0448 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		824DC0D6169B532800FD0448 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		824DC0D8169B537300FD0448 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
 		824DC0DA169B56C700FD0448 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		829417B91691D2C3002F326D /* DetailWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWineViewController.h; sourceTree = "<group>"; };
-		829417BA1691D2C3002F326D /* DetailWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWineViewController.m; sourceTree = "<group>"; };
-		829417BB1691D2C3002F326D /* DetailWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailWineViewController.xib; sourceTree = "<group>"; };
+		829417B91691D2C3002F326D /* DetailWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailWineViewController.h; path = TabBar/DetailWineViewController.h; sourceTree = "<group>"; };
+		829417BA1691D2C3002F326D /* DetailWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailWineViewController.m; path = TabBar/DetailWineViewController.m; sourceTree = "<group>"; };
+		829417BB1691D2C3002F326D /* DetailWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailWineViewController.xib; path = TabBar/DetailWineViewController.xib; sourceTree = "<group>"; };
 		82CDF14716934E8500EA87AB /* Wine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
 		82CDF14816934E8500EA87AB /* Wine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
 		82CDF14A16934EA500EA87AB /* vin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vin.json; sourceTree = "<group>"; };
@@ -223,6 +221,16 @@
 			path = SDWebImage/SDWebImage;
 			sourceTree = "<group>";
 		};
+		82FE496616A2C836002CA8E2 /* DetailWineView */ = {
+			isa = PBXGroup;
+			children = (
+				829417B91691D2C3002F326D /* DetailWineViewController.h */,
+				829417BA1691D2C3002F326D /* DetailWineViewController.m */,
+				829417BB1691D2C3002F326D /* DetailWineViewController.xib */,
+			);
+			name = DetailWineView;
+			sourceTree = "<group>";
+		};
 		9BFC82CA16392F44000C1600 /* MSToolTips */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,12 +299,12 @@
 		9BFC82F516393310000C1600 /* WineView */ = {
 			isa = PBXGroup;
 			children = (
+				82FE496616A2C836002CA8E2 /* DetailWineView */,
 				82CDF14716934E8500EA87AB /* Wine.h */,
 				82E112E01690C47100E7AD69 /* Contact.h */,
 				82CDF14816934E8500EA87AB /* Wine.m */,
 				82E112F51690CDA900E7AD69 /* Contact.m */,
 				82CDF14A16934EA500EA87AB /* vin.json */,
-				822FC9E41690D918007FE93C /* SampleLoad.json */,
 				9B49991D16393726000A24DA /* mabout.png */,
 				9B49991B163936EF000A24DA /* bouteille@2x.png */,
 				9B499915163936B7000A24DA /* WineViewController.m */,
@@ -377,9 +385,6 @@
 				9B2D6B9816244AF20038A459 /* DataListViewController.h */,
 				9B2D6B9916244AF20038A459 /* DataListViewController.m */,
 				9B04F5271624659500B0EA4D /* ProfileViewController.h */,
-				829417B91691D2C3002F326D /* DetailWineViewController.h */,
-				829417BA1691D2C3002F326D /* DetailWineViewController.m */,
-				829417BB1691D2C3002F326D /* DetailWineViewController.xib */,
 				9B04F5281624659500B0EA4D /* ProfileViewController.m */,
 				9B04F5291624659500B0EA4D /* ProfileViewController.xib */,
 				9B2D6BA216244E250038A459 /* DetailListViewController.xib */,
@@ -476,7 +481,6 @@
 				9BFC82FA163933F4000C1600 /* bouteille.png in Resources */,
 				9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */,
 				9B49991E16393726000A24DA /* mabout.png in Resources */,
-				822FC9E51690D918007FE93C /* SampleLoad.json in Resources */,
 				829417BD1691D2C3002F326D /* DetailWineViewController.xib in Resources */,
 				82CDF14B16934EA500EA87AB /* vin.json in Resources */,
 				824DC0D9169B537300FD0448 /* FacebookSDKResources.bundle in Resources */,

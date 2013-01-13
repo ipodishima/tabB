@@ -31,6 +31,8 @@
     self.title=@"List";
     _dataToShow = [[NSArray alloc] initWithObjects:@"Mon Profil", @"Videos", @"A propos", nil];
     _dataToDraw = [[NSArray alloc] initWithObjects: @"17-bar-chart.png",@"17-bar-chart.png",@"17-bar-chart.png", nil];
+  //  UIView *footer = [[UIView alloc] initWithFrame:CGRectZero];
+   // self.tableView.tableFooterView =footer;
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -63,7 +65,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_dataToShow count];
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
