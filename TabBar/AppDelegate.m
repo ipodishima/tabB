@@ -10,12 +10,12 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
 #import "FourthViewController.h"
 #import "FifthViewController.h"
 #import "SixthViewController.h"
 #import "WineViewController.h"
 #import "CommandesViewController.h"
+#import "CoursViewController.h"
 
 @implementation AppDelegate
 @synthesize session = _session;
@@ -71,7 +71,7 @@
     winenavigationController.title= @"Wine2";
     [winenavigationController setNavigationBarHidden:NO];
     
-    SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];                 
+    CoursViewController *secondViewController = [[CoursViewController alloc]  initWithStyle:UITableViewStylePlain];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
     navigationController.title = @"Cours";
     [navigationController setNavigationBarHidden:NO];
