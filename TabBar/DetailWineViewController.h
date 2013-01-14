@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Wine.h"
 #import "../SDWebImage/SDWebImage/UIImageView+WebCache.h"
-
-
+#import "AppDelegate.h"
 @interface DetailWineViewController : UIViewController
 {
       UILabel *_label;

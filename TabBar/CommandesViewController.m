@@ -4,10 +4,15 @@
 
 @interface CommandesViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *buttonLoginLogout;
+@property (strong, nonatomic) IBOutlet UIButton *buttonPublish;
+@property(nonatomic, retain) UITableView *tableView;
+
 @end
 
-@implementation CommandesViewController
 
+@implementation CommandesViewController
+@synthesize arrayOfWineToOrder = _arrayOfWineToOrder;
+@synthesize postParams = _postParams;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -16,33 +21,80 @@
     }
     return self;
 }
-@synthesize buttonLoginLogout = _buttonLoginLogout;
-- (void)viewDidLoad
+- (void)publishStory
 {
-    self.title=@"List";
-    _dataToShow = [[NSArray alloc] initWithObjects:@"Mon Profil", @"Videos", @"A propos", nil];
-    _dataToDraw = [[NSArray alloc] initWithObjects: @"17-bar-chart.png",@"17-bar-chart.png",@"17-bar-chart.png", nil];
-    //  UIView *footer = [[UIView alloc] initWithFrame:CGRectZero];
-    // self.tableView.tableFooterView =footer;
+    NSString *texte = [NSString stringWithFormat:
+              @"J'ai commandé %d bouteilles",
+                             _arrayOfWineToOrder.count];
+    self.postParams =
+    [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+     @"https://www.lepetitballon.com/", @"link",
+     @"http://www.lepetitballon.com/img/logo.png", @"picture",
+     @"Lepetitballon", @"name",
+     texte, @"caption",
+     nil];
+    
+    [FBRequestConnection
+     startWithGraphPath:@"me/feed"
+     parameters:self.postParams
+     HTTPMethod:@"POST"
+     completionHandler:^(FBRequestConnection *connection,
+                         id result,
+                         NSError *error) {
+         NSString *alertText;
+         if (error) {
+             alertText = [NSString stringWithFormat:
+                          @"error: domain = %@, code = %d",
+                          error.domain, error.code];
+         } else {
+             alertText = [NSString stringWithFormat:
+                          @"Posted action, id: %@",
+                          [result objectForKey:@"id"]];
+         }
+         // Show the result in an alert
+         [[[UIAlertView alloc] initWithTitle:@"Result"
+                                     message:alertText
+                                    delegate:self
+                           cancelButtonTitle:@"OK!"
+                           otherButtonTitles:nil]
+          show];
+     }];
+}
+- (void)viewDidLoad
+{    
+    if (_arrayOfWineToOrder == nil) {
+        _arrayOfWineToOrder = [NSMutableArray  arrayWithObjects:nil];
+    } 
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+ 
+    
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(12, 50, 280, 45)];
+    self.tableView.tableFooterView =footer;
+    
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(12, 50, 280, 45)];
+    self.tableView.tableHeaderView =header;
+ 
     [super viewDidLoad];
+   
+    _buttonPublish = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_buttonPublish setFrame:CGRectMake(12, 8, 280, 30)];
+    [_buttonPublish setTitle:@"Publier" forState:UIControlStateNormal];
+    [_buttonPublish addTarget:self action:@selector(shareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+       [_buttonPublish setHidden:TRUE];
+    [footer addSubview:_buttonPublish];
     
     _buttonLoginLogout = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_buttonLoginLogout setFrame:CGRectMake(30, 150, 280, 30)];
+    [_buttonLoginLogout setFrame:CGRectMake(18, 8, 280, 30)];
     [_buttonLoginLogout setTitle:@"Facebook" forState:UIControlStateNormal];
     [_buttonLoginLogout addTarget:self action:@selector(buttonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_buttonLoginLogout];
+    [header addSubview:_buttonLoginLogout];
     [self updateView];
     
     
-    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     if (!appDelegate.session.isOpen) {
-        // create a fresh session object
-        appDelegate.session = [[FBSession alloc] init];
+                appDelegate.session = [[FBSession alloc] init];
         
-        // if we don't have a cached token, a call to open here would cause UX for login to
-        // occur; we don't want that to happen unless the user clicks the login button, and so
-        // we check here to make sure we have a token before calling open
-        if (appDelegate.session.state == FBSessionStateCreatedTokenLoaded) {
+               if (appDelegate.session.state == FBSessionStateCreatedTokenLoaded) {
             // even though we had a cached token, we need to login to make the session usable
             [appDelegate.session openWithCompletionHandler:^(FBSession *session,
                                                              FBSessionState status,
@@ -53,24 +105,20 @@
         }
     }
 
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 - (void)updateView {
     // get the app delegate, so that we can reference the session property
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     if (appDelegate.session.isOpen) {
+           [FBSession setActiveSession:appDelegate.session];
         // valid account UI is shown whenever the session is open
         [self.buttonLoginLogout setTitle:@"Log out" forState:UIControlStateNormal];
-        //    [self.textNoteOrLink setText:[NSString stringWithFormat:@"https://graph.facebook.com/me/friends?access_token=%@",
-        //      appDelegate.session.accessToken]];
+        [_buttonPublish setHidden:FALSE];
+ 
     } else {
         // login-needed account UI is shown whenever the session is closed
         [self.buttonLoginLogout setTitle:@"Log in" forState:UIControlStateNormal];
+        [_buttonPublish setHidden:TRUE];
         //  [self.textNoteOrLink setText:@"Login to create a link to fetch account data"];
     }
 }
@@ -96,8 +144,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 3;
+ 
+ //  NSLog([NSString stringWithFormat:@"count : %d",[_arrayOfWineToOrder count]],@"ee");
+    
+    return [_arrayOfWineToOrder count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,7 +167,7 @@
     // cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.imageView.image = image;
     
-    cell.myLabel.text = [_dataToShow objectAtIndex:[indexPath row]];
+   cell.myLabel.text = [[_arrayOfWineToOrder objectAtIndex:[indexPath row]]name];
     
     return cell;
     
@@ -140,7 +190,7 @@
 - (IBAction)buttonClickHandler:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     
-    // this button's job is to flip-flop the session from open to closed
+   // this button's job is to flip-flop the session from open to closed
     if (appDelegate.session.isOpen) {
         [appDelegate.session closeAndClearTokenInformation];
         
@@ -157,6 +207,34 @@
             // and here we make sure to update our UX according to the new session state
             [self updateView];
         }];
-    }
+    } 
+ 
 }
+- (IBAction)shareButtonAction:(id)sender {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+ 
+    if (appDelegate.session.isOpen) {
+        // Ask for publish_actions permissions in context
+        if ([appDelegate.session.permissions
+             indexOfObject:@"publish_actions"] == NSNotFound) {
+            // No permissions found in session, ask for it
+            [appDelegate.session reauthorizeWithPublishPermissions:[NSArray arrayWithObject:@"publish_actions"]
+             defaultAudience:FBSessionDefaultAudienceFriends
+             completionHandler:^(FBSession *session, NSError *error) {
+                 if (!error) {
+                     // If permissions granted, publish the story
+                     [self publishStory];
+                 }
+             }];
+        } else {
+            // If permissions present, publish the story
+            [self publishStory];
+        }
+
+        
+    }else{
+        NSLog(@"eeze");
+    }
+  }
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DetailWineViewController.h"
+#import "CommandesViewController.h"
 
 @interface DetailWineViewController ()
 
@@ -29,16 +30,16 @@
 - (void)viewDidLoad
 {
         self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    _label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 3, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 3, CGRectGetWidth(self.view.bounds)-20.0, 15.0)];
     _label.text = [NSString stringWithFormat:@"Nom: %s",[_wineAAfficher.name UTF8String ]];
     _label.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
    [self.view addSubview:_label];
     
-    _labelage = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 21.0, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
+    _labelage = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 21.0, CGRectGetWidth(self.view.bounds)-20.0, 15.0)];
      _labelage.text = [NSString stringWithFormat:@"Date: %s",[_wineAAfficher.age UTF8String ]];
     _labelage.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
      [self.view addSubview:_labelage];
-    _labeldom = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 39.0, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
+    _labeldom = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 39.0, CGRectGetWidth(self.view.bounds)-20.0, 15.0)];
     _labeldom.text = [NSString stringWithFormat:@"Domaine: %s",[_wineAAfficher.domaine UTF8String ]];
     _labeldom.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
     [self.view addSubview:_labeldom];
@@ -67,17 +68,23 @@
 }
 - (void) commander:(id)sender
 { UITabBarController *tabController = self.tabBarController;
-  
-    UIViewController *controllerToSelect = nil;
+ //  AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+  // [appDelegate.arrayOfWineToOrder addObject:_wineAAfficher];
+    
+    CommandesViewController *controllerToSelect = nil;
     for (UIViewController *controller in tabController.viewControllers)
         if([controller isKindOfClass:NSClassFromString(@"CommandesViewController")])
         {
-            controllerToSelect = controller;
+            controllerToSelect =(id) controller;
             break; 
         }
-    
+    if (controllerToSelect.arrayOfWineToOrder == nil) {
+    controllerToSelect.arrayOfWineToOrder = [NSMutableArray  arrayWithObjects:nil];
+    }
+    [controllerToSelect.arrayOfWineToOrder  addObject:_wineAAfficher];
+ 
+  [controllerToSelect.tableView reloadData];
   
-    
     NSInteger theInteger = [controllerToSelect.tabBarItem.badgeValue integerValue];
     theInteger++;
    [[controllerToSelect tabBarItem]setBadgeValue:[NSString stringWithFormat:@"%d", theInteger]];
