@@ -28,21 +28,26 @@
 
 - (void)viewDidLoad
 {
+        self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     _label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 3, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
     _label.text = [NSString stringWithFormat:@"Nom: %s",[_wineAAfficher.name UTF8String ]];
+    _label.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
    [self.view addSubview:_label];
     
     _labelage = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 21.0, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
      _labelage.text = [NSString stringWithFormat:@"Date: %s",[_wineAAfficher.age UTF8String ]];
+    _labelage.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
      [self.view addSubview:_labelage];
     _labeldom = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 39.0, CGRectGetWidth(self.view.bounds)-10.0, 15.0)];
     _labeldom.text = [NSString stringWithFormat:@"Domaine: %s",[_wineAAfficher.domaine UTF8String ]];
+    _labeldom.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
     [self.view addSubview:_labeldom];
 
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 57.0, CGRectGetWidth(self.view.bounds)-20.0, 150.0)];
     _textView.textColor = [UIColor blackColor];
     _textView.font = [UIFont boldSystemFontOfSize:15.0];
-    _textView.backgroundColor = [UIColor grayColor];
+    _textView.backgroundColor = [UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
+     
     _textView.editable = false;
     _textView.text = [NSString stringWithFormat:@"%s",[_wineAAfficher.apropos UTF8String ]];
     [self.view addSubview:_textView];
@@ -65,7 +70,7 @@
   
     UIViewController *controllerToSelect = nil;
     for (UIViewController *controller in tabController.viewControllers)
-        if([controller isKindOfClass:NSClassFromString(@"ThirdViewController")])
+        if([controller isKindOfClass:NSClassFromString(@"CommandesViewController")])
         {
             controllerToSelect = controller;
             break; 

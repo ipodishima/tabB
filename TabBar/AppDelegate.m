@@ -15,6 +15,7 @@
 #import "FifthViewController.h"
 #import "SixthViewController.h"
 #import "WineViewController.h"
+#import "CommandesViewController.h"
 
 @implementation AppDelegate
 @synthesize session = _session;
@@ -55,6 +56,10 @@
     UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"List"
                                                               image:nil
                                                                 tag:0];
+    UITabBarItem *tabBarItemCommande = [[UITabBarItem alloc] initWithTitle:@"Commandes"
+                                                              image:nil
+                                                                tag:0];
+    
     
     DataListViewController *dataListVC = [[DataListViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dataListVC];
@@ -71,8 +76,12 @@
     navigationController.title = @"Cours";
     [navigationController setNavigationBarHidden:NO];
     
-    ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];                 
-    thirdViewController.title = @"Commandes";
+//    ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];                 
+//    thirdViewController.title = @"Commandes";
+    
+    CommandesViewController *commandeslist = [[CommandesViewController alloc] initWithStyle:UITableViewStylePlain];
+    commandeslist.tabBarItem = tabBarItemCommande;
+
     
     FourthViewController *fourthViewController = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];                 
     fourthViewController.title = @"Quatrième";
@@ -86,7 +95,7 @@
     sixthViewController.tabBarItem = tabBarItemSixth;
     
     _tabBarController.viewControllers = [NSArray arrayWithObjects: navController,
-                                         winenavigationController, navigationController, thirdViewController, fourthViewController, fifthViewController, sixthViewController, nil];
+                                         winenavigationController, navigationController, commandeslist, fourthViewController, fifthViewController, sixthViewController, nil];
     
     [_tabBarController.tabBar setSelectedImageTintColor:[UIColor grayColor]];
     

@@ -38,6 +38,7 @@
 		9B499916163936B7000A24DA /* WineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B499915163936B7000A24DA /* WineViewController.m */; };
 		9B49991C163936EF000A24DA /* bouteille@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B49991B163936EF000A24DA /* bouteille@2x.png */; };
 		9B49991E16393726000A24DA /* mabout.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B49991D16393726000A24DA /* mabout.png */; };
+		9B9CE7F716A40696003E26B6 /* CommandesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9CE7F616A40696003E26B6 /* CommandesViewController.m */; };
 		9BFC82CF16392F70000C1600 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82CE16392F70000C1600 /* iCarousel.m */; };
 		9BFC82D516392F7D000C1600 /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82D216392F7D000C1600 /* LBYouTubePlayerController.m */; };
 		9BFC82D616392F7D000C1600 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82D416392F7D000C1600 /* LBYouTubePlayerViewController.m */; };
@@ -120,6 +121,8 @@
 		9B499915163936B7000A24DA /* WineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineViewController.m; sourceTree = "<group>"; };
 		9B49991B163936EF000A24DA /* bouteille@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouteille@2x.png"; sourceTree = "<group>"; };
 		9B49991D16393726000A24DA /* mabout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mabout.png; sourceTree = "<group>"; };
+		9B9CE7F516A40696003E26B6 /* CommandesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandesViewController.h; sourceTree = "<group>"; };
+		9B9CE7F616A40696003E26B6 /* CommandesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandesViewController.m; sourceTree = "<group>"; };
 		9BFC82CD16392F70000C1600 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		9BFC82CE16392F70000C1600 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		9BFC82D116392F7D000C1600 /* LBYouTubePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerController.h; sourceTree = "<group>"; };
@@ -230,6 +233,15 @@
 				829417BB1691D2C3002F326D /* DetailWineViewController.xib */,
 			);
 			name = DetailWineView;
+			sourceTree = "<group>";
+		};
+		9B9CE7F816A40A93003E26B6 /* CommandesView */ = {
+			isa = PBXGroup;
+			children = (
+				9B9CE7F516A40696003E26B6 /* CommandesViewController.h */,
+				9B9CE7F616A40696003E26B6 /* CommandesViewController.m */,
+			);
+			name = CommandesView;
 			sourceTree = "<group>";
 		};
 		9BFC82CA16392F44000C1600 /* MSToolTips */ = {
@@ -358,6 +370,7 @@
 		E03C9815151A86590004D2FD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				9B9CE7F816A40A93003E26B6 /* CommandesView */,
 				9BFC82F516393310000C1600 /* WineView */,
 				E03C981E151A86590004D2FD /* AppDelegate.h */,
 				E03C981F151A86590004D2FD /* AppDelegate.m */,
@@ -524,6 +537,7 @@
 				82063BB21698CC1800C09A40 /* SDWebImagePrefetcher.m in Sources */,
 				82063BB31698CC1800C09A40 /* UIButton+WebCache.m in Sources */,
 				82063BB41698CC1800C09A40 /* UIImageView+WebCache.m in Sources */,
+				9B9CE7F716A40696003E26B6 /* CommandesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
