@@ -10,7 +10,7 @@
 #import "DetailListViewController.h"
 #import "CustomCell.h"
 #import "ProfileViewController.h"
-
+#import "DetailCoursViewController.h"
 @interface CoursViewController ()
 
 @end
@@ -89,28 +89,12 @@
 {
  
     
+    DetailCoursViewController *detailListViewController = [[DetailCoursViewController alloc] initWithNibName:@"DetailCoursViewController" bundle:nil];
     
+    detailListViewController.coursAAfficher = [_arrayOfCours objectAtIndex:[indexPath row]];
     
-    switch (indexPath.row ) {
-        case 0:   {
-            ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-            [self.navigationController pushViewController:profileViewController animated:YES];
-        }
-            
-            break;
-            
-        default:{   DetailListViewController *detailListViewController = [[DetailListViewController alloc] initWithNibName:@"DetailListViewController" bundle:nil];
-            
-            detailListViewController.texteAAfficher = [_arrayOfCours objectAtIndex:[indexPath row]];
-             
-            detailListViewController.title = [_dataToShow objectAtIndex:[indexPath row]];
-            [self.navigationController pushViewController:detailListViewController animated:YES];
-        }
-            
-            break;
-    }
-    
-}
+    [self.navigationController pushViewController:detailListViewController animated:YES];
+ }
 #pragma mark - DownloadDelegate protocol
 
 - (void) downloadOperation:(DownloadOperation *)operation didFailWithError:(NSError *)error

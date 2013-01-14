@@ -15,6 +15,9 @@
 		82063BB21698CC1800C09A40 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BA81698CC1800C09A40 /* SDWebImagePrefetcher.m */; };
 		82063BB31698CC1800C09A40 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BAA1698CC1800C09A40 /* UIButton+WebCache.m */; };
 		82063BB41698CC1800C09A40 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82063BAC1698CC1800C09A40 /* UIImageView+WebCache.m */; };
+		821E62CD16A47AE2008257A2 /* DetailCoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E62CB16A47AE2008257A2 /* DetailCoursViewController.m */; };
+		821E62CE16A47AE2008257A2 /* DetailCoursViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821E62CC16A47AE2008257A2 /* DetailCoursViewController.xib */; };
+		821E62D216A48360008257A2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821E62D116A48360008257A2 /* CoreLocation.framework */; };
 		824DC0CD169B527600FD0448 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DC0CC169B527600FD0448 /* FacebookSDK.framework */; };
 		824DC0D7169B532800FD0448 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DC0D6169B532800FD0448 /* Accounts.framework */; };
 		824DC0D9169B537300FD0448 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824DC0D8169B537300FD0448 /* FacebookSDKResources.bundle */; };
@@ -92,6 +95,10 @@
 		82063BAA1698CC1800C09A40 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		82063BAB1698CC1800C09A40 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		82063BAC1698CC1800C09A40 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		821E62CA16A47AE2008257A2 /* DetailCoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCoursViewController.h; sourceTree = "<group>"; };
+		821E62CB16A47AE2008257A2 /* DetailCoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCoursViewController.m; sourceTree = "<group>"; };
+		821E62CC16A47AE2008257A2 /* DetailCoursViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCoursViewController.xib; sourceTree = "<group>"; };
+		821E62D116A48360008257A2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		824DC0CC169B527600FD0448 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		824DC0D6169B532800FD0448 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		824DC0D8169B537300FD0448 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
@@ -180,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821E62D216A48360008257A2 /* CoreLocation.framework in Frameworks */,
 				824DC0DB169B56C700FD0448 /* Social.framework in Frameworks */,
 				824DC0D7169B532800FD0448 /* Accounts.framework in Frameworks */,
 				82EFA7DB169B4E4700A5AC91 /* AdSupport.framework in Frameworks */,
@@ -225,6 +233,16 @@
 			path = SDWebImage/SDWebImage;
 			sourceTree = "<group>";
 		};
+		821E62D016A47B06008257A2 /* DetailCoursView */ = {
+			isa = PBXGroup;
+			children = (
+				821E62CA16A47AE2008257A2 /* DetailCoursViewController.h */,
+				821E62CB16A47AE2008257A2 /* DetailCoursViewController.m */,
+				821E62CC16A47AE2008257A2 /* DetailCoursViewController.xib */,
+			);
+			name = DetailCoursView;
+			sourceTree = "<group>";
+		};
 		82FE496616A2C836002CA8E2 /* DetailWineView */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +266,7 @@
 		9B9CE7FF16A454CD003E26B6 /* CoursView */ = {
 			isa = PBXGroup;
 			children = (
+				821E62D016A47B06008257A2 /* DetailCoursView */,
 				9BC507CE16A45C4A008687E0 /* Cours.json */,
 				9B9CE7FC16A453C3003E26B6 /* CoursViewController.h */,
 				9B9CE7FD16A453C3003E26B6 /* CoursViewController.m */,
@@ -342,6 +361,7 @@
 		E03C9800151A86590004D2FD = {
 			isa = PBXGroup;
 			children = (
+				821E62D116A48360008257A2 /* CoreLocation.framework */,
 				82063B981698CC1800C09A40 /* SDWebImage */,
 				9BFC82EB163930CF000C1600 /* Default-568h@2x.png */,
 				9BFC82CA16392F44000C1600 /* MSToolTips */,
@@ -507,6 +527,7 @@
 				82CDF14B16934EA500EA87AB /* vin.json in Resources */,
 				824DC0D9169B537300FD0448 /* FacebookSDKResources.bundle in Resources */,
 				9BC507CF16A45C4A008687E0 /* Cours.json in Resources */,
+				821E62CE16A47AE2008257A2 /* DetailCoursViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +569,7 @@
 				9B9CE7F716A40696003E26B6 /* CommandesViewController.m in Sources */,
 				9B9CE7FE16A453C3003E26B6 /* CoursViewController.m in Sources */,
 				9BC507CC16A4553A008687E0 /* Cours.m in Sources */,
+				821E62CD16A47AE2008257A2 /* DetailCoursViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
