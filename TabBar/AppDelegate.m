@@ -89,9 +89,10 @@
     
     [_tabBarController.tabBar setSelectedImageTintColor:[UIColor grayColor]];
     
-    [_window addSubview:_tabBarController.view];
+ 
     
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:_tabBarController];
     [self.window makeKeyAndVisible];
     return YES;
 }

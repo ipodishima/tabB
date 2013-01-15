@@ -79,28 +79,36 @@
             
             break; 
         }
+    
+    
+        Wine *w = [Wine  new];
+        w.name=_wineAAfficher.name;
+        w.age=wineAAfficher.age;
+        w.apropos=wineAAfficher.apropos;
+    
+    NSLog(@"%d" ,[controllerToSelect.arrayOfWineToOrder count]);
     if (controllerToSelect.arrayOfWineToOrder == nil) {
     controllerToSelect.arrayOfWineToOrder = [NSMutableArray  arrayWithObjects:nil];
     }
  
-    if (controllerToSelect.arrayOfWineToOrder.count == 0) {
-        _wineAAfficher.nombre = 1;
-        [controllerToSelect.arrayOfWineToOrder  addObject:_wineAAfficher];
-
-    } else {
-        for (int y =0 ; y <= controllerToSelect.arrayOfWineToOrder.count; y++) {
+ 
+    BOOL newWine =YES;
+        for (int y =0 ; y < controllerToSelect.arrayOfWineToOrder.count; y++) {
             Wine *wine = [controllerToSelect.arrayOfWineToOrder objectAtIndex:y ];
-            if (wine.name = _wineAAfficher.name)
+            if (wine.name == w.name)
             {
                 wine.nombre++;
-               
+                newWine = NO;
                 break;
             }
         
         }
-
+    if(newWine){
+        w.nombre =1;
+        [controllerToSelect.arrayOfWineToOrder  addObject:w];
     }
-       
+    
+ 
  
   [controllerToSelect.tableView reloadData];
   

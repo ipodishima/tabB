@@ -29,6 +29,11 @@
 		82E075581698D0C7006B0523 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E075571698D0C7006B0523 /* MapKit.framework */; };
 		82E112EA1690CC1200E7AD69 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DA16392FC7000C1600 /* DownloadManager.m */; };
 		82E112EC1690CC4C00E7AD69 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC82DC16392FC7000C1600 /* DownloadOperation.m */; };
+		82E269B016A5DF8700DE4B62 /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E269AF16A5DF8700DE4B62 /* 43-film-roll.png */; };
+		82E269B516A5E05300DE4B62 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E269B316A5E05200DE4B62 /* AboutViewController.m */; };
+		82E269B616A5E05300DE4B62 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B416A5E05200DE4B62 /* AboutViewController.xib */; };
+		82E269B816A5E3D200DE4B62 /* lepetit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B716A5E3D200DE4B62 /* lepetit.jpg */; };
+		82E269BA16A5E4DA00DE4B62 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B916A5E4DA00DE4B62 /* 112-group.png */; };
 		82E3D7E01698B5D8005B6FA1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E3D7DF1698B5D8005B6FA1 /* ImageIO.framework */; };
 		82EFA7DB169B4E4700A5AC91 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */; };
 		9B04F52A1624659500B0EA4D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F5281624659500B0EA4D /* ProfileViewController.m */; };
@@ -106,6 +111,12 @@
 		82CDF14A16934EA500EA87AB /* vin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vin.json; sourceTree = "<group>"; };
 		82E075571698D0C7006B0523 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		82E112E01690C47100E7AD69 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = MSToolTips/MSToolTips/Contact.h; sourceTree = "<group>"; };
+		82E269AF16A5DF8700DE4B62 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "43-film-roll.png"; path = "TabBar/43-film-roll.png"; sourceTree = "<group>"; };
+		82E269B216A5E05100DE4B62 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		82E269B316A5E05200DE4B62 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		82E269B416A5E05200DE4B62 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		82E269B716A5E3D200DE4B62 /* lepetit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lepetit.jpg; sourceTree = "<group>"; };
+		82E269B916A5E4DA00DE4B62 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		82E3D7DF1698B5D8005B6FA1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9B04F5271624659500B0EA4D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -227,6 +238,31 @@
 				821E62CC16A47AE2008257A2 /* DetailCoursViewController.xib */,
 			);
 			name = DetailCoursView;
+			sourceTree = "<group>";
+		};
+		82E269BB16A5E58F00DE4B62 /* AboutView */ = {
+			isa = PBXGroup;
+			children = (
+				82E269B216A5E05100DE4B62 /* AboutViewController.h */,
+				82E269B416A5E05200DE4B62 /* AboutViewController.xib */,
+				82E269B316A5E05200DE4B62 /* AboutViewController.m */,
+			);
+			name = AboutView;
+			sourceTree = "<group>";
+		};
+		82E269BC16A5E5C600DE4B62 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				9B2D6B9816244AF20038A459 /* DataListViewController.h */,
+				9B2D6B9916244AF20038A459 /* DataListViewController.m */,
+				9B04F5271624659500B0EA4D /* ProfileViewController.h */,
+				9B04F5281624659500B0EA4D /* ProfileViewController.m */,
+				9B04F5291624659500B0EA4D /* ProfileViewController.xib */,
+				9B2D6BA216244E250038A459 /* DetailListViewController.xib */,
+				9B2D6BA516244E730038A459 /* DetailListViewController.m */,
+				9B2D6BA416244E4D0038A459 /* DetailListViewController.h */,
+			);
+			name = MainView;
 			sourceTree = "<group>";
 		};
 		82FE496616A2C836002CA8E2 /* DetailWineView */ = {
@@ -390,6 +426,8 @@
 		E03C9815151A86590004D2FD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				82E269BC16A5E5C600DE4B62 /* MainView */,
+				82E269BB16A5E58F00DE4B62 /* AboutView */,
 				9B9CE7FF16A454CD003E26B6 /* CoursView */,
 				9B9CE7F816A40A93003E26B6 /* CommandesView */,
 				9BFC82F516393310000C1600 /* WineView */,
@@ -398,14 +436,6 @@
 				E03C9816151A86590004D2FD /* Supporting Files */,
 				9B2D6B9616244AF20038A459 /* CustomCell.h */,
 				9B2D6B9716244AF20038A459 /* CustomCell.m */,
-				9B2D6B9816244AF20038A459 /* DataListViewController.h */,
-				9B2D6B9916244AF20038A459 /* DataListViewController.m */,
-				9B04F5271624659500B0EA4D /* ProfileViewController.h */,
-				9B04F5281624659500B0EA4D /* ProfileViewController.m */,
-				9B04F5291624659500B0EA4D /* ProfileViewController.xib */,
-				9B2D6BA216244E250038A459 /* DetailListViewController.xib */,
-				9B2D6BA516244E730038A459 /* DetailListViewController.m */,
-				9B2D6BA416244E4D0038A459 /* DetailListViewController.h */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -424,8 +454,11 @@
 		E03C9848151A8AF30004D2FD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				82E269AF16A5DF8700DE4B62 /* 43-film-roll.png */,
+				82E269B916A5E4DA00DE4B62 /* 112-group.png */,
 				9B1BF2F616A59BD90062D8B8 /* 96-book.png */,
 				9B1BF2FA16A59BF70062D8B8 /* 142-wine-bottle.png */,
+				82E269B716A5E3D200DE4B62 /* lepetit.jpg */,
 				9B1BF2F816A59BEC0062D8B8 /* 53-house.png */,
 				E03C9844151A8AED0004D2FD /* 17-bar-chart.png */,
 				9B1BF2FC16A59C1C0062D8B8 /* 167-upload-photo.png */,
@@ -505,6 +538,10 @@
 				9B1BF2F916A59BEC0062D8B8 /* 53-house.png in Resources */,
 				9B1BF2FB16A59BF70062D8B8 /* 142-wine-bottle.png in Resources */,
 				9B1BF2FD16A59C1C0062D8B8 /* 167-upload-photo.png in Resources */,
+				82E269B016A5DF8700DE4B62 /* 43-film-roll.png in Resources */,
+				82E269B616A5E05300DE4B62 /* AboutViewController.xib in Resources */,
+				82E269B816A5E3D200DE4B62 /* lepetit.jpg in Resources */,
+				82E269BA16A5E4DA00DE4B62 /* 112-group.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +580,7 @@
 				9BC507CC16A4553A008687E0 /* Cours.m in Sources */,
 				821E62CD16A47AE2008257A2 /* DetailCoursViewController.m in Sources */,
 				9B1BD88D16A599F40062D8B8 /* WineCell.m in Sources */,
+				82E269B516A5E05300DE4B62 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

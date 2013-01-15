@@ -10,6 +10,7 @@
 #import "DetailListViewController.h"
 #import "CustomCell.h"
 #import "ProfileViewController.h"
+#import "AboutViewController.h"
 
 @interface DataListViewController ()
 
@@ -30,7 +31,7 @@
 {
     self.title=@"List";
     _dataToShow = [[NSArray alloc] initWithObjects:@"Mon Profil", @"Videos", @"A propos", nil];
-    _dataToDraw = [[NSArray alloc] initWithObjects: @"17-bar-chart.png",@"17-bar-chart.png",@"17-bar-chart.png", nil];
+    _dataToDraw = [[NSArray alloc] initWithObjects: @"17-bar-chart.png",@"43-film-roll.png",@"112-group.png", nil];
    UIView *footer = [[UIView alloc] initWithFrame:CGRectZero];
    self.tableView.tableFooterView =footer;
     [super viewDidLoad];
@@ -146,7 +147,12 @@
                     }
 
             break;
-
+        case 2:   {
+            AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+            [self.navigationController pushViewController:aboutViewController animated:YES];
+        }
+            
+            break;
         default:{   DetailListViewController *detailListViewController = [[DetailListViewController alloc] initWithNibName:@"DetailListViewController" bundle:nil];
             
             detailListViewController.texteAAfficher = [_dataToShow objectAtIndex:[indexPath row]];

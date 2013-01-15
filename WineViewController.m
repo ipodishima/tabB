@@ -117,6 +117,7 @@
         w.apropos = [dic objectForKey:@"apropos"];
         w.age = [dic objectForKey:@"age"]  ;
         w.image = [dic objectForKey:@"image"]  ;
+        w.nombre = 1;
         // Add it to the array
         [_arrayOfContacts addObject:w];
         
