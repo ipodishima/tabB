@@ -27,12 +27,16 @@
 {
     _label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 3, CGRectGetWidth(self.view.bounds)-20.0, 15.0)];
     _label.text = [NSString stringWithFormat:@"Cours: %s",[_coursAAfficher.name UTF8String ]];
-    _label.backgroundColor =[UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
+ 
     [self.view addSubview:_label];
 
+    _labeladd = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 21, CGRectGetWidth(self.view.bounds)-20.0, 15.0)];
+    _labeladd.text = [NSString stringWithFormat:@"Addresse: %s",[_coursAAfficher.address UTF8String ]];
+ 
+    [self.view addSubview:_labeladd];
     
     [super viewDidLoad];
-    mapView = [[MKMapView alloc] initWithFrame:CGRectMake(10.0, 25, CGRectGetWidth(self.view.bounds)-20.0, 150)];
+    mapView = [[MKMapView alloc] initWithFrame:CGRectMake(10.0, 45, CGRectGetWidth(self.view.bounds)-20.0, 150)];
     [mapView setShowsUserLocation:TRUE];
     [mapView setMapType:MKMapTypeStandard];
     [self.view addSubview:mapView];
@@ -45,8 +49,8 @@
     
     MKPointAnnotation *annotationPoint = [[MKPointAnnotation alloc] init];
     annotationPoint.coordinate = annotationCoord;
-    annotationPoint.title = @"Microsoft";
-    annotationPoint.subtitle = @"Microsoft's headquarters";
+    annotationPoint.title = _coursAAfficher.name;
+   
     [mapView addAnnotation:annotationPoint];
 }
 

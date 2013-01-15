@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic) float lat;
 @property (nonatomic) float lon;
+
 @end
 

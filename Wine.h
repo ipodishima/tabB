@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSString *domaine;
 @property (nonatomic, strong) NSString *apropos;
 @property (nonatomic, strong) NSString *image;
+@property (nonatomic) NSInteger nombre;
 @end

@@ -20,6 +20,7 @@
     MKPlacemark *mPlacemark;
     CLLocationCoordinate2D location;
     UILabel *_label;
+     UILabel *_labeladd;
     
 }
 @property (nonatomic, strong) Cours *coursAAfficher;

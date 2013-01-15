@@ -8,11 +8,11 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-#import "SecondViewController.h"
-#import "FourthViewController.h"
+ 
+ 
+ 
 #import "FifthViewController.h"
-#import "SixthViewController.h"
+
 #import "WineViewController.h"
 #import "CommandesViewController.h"
 #import "CoursViewController.h"
@@ -45,7 +45,7 @@
     
     WineViewController *wineVC = [[WineViewController alloc] init];
     UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Wine"
-                                                              image:nil
+                                                              image:[UIImage imageNamed:@"142-wine-bottle.png"]
                                                                 tag:2];
     wineVC.tabBarItem = tabBarItem3;
 
@@ -54,10 +54,13 @@
     
     
     UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"List"
-                                                              image:nil
+                                                              image:[UIImage imageNamed:@"53-house.png"]
+                                                                tag:0];
+    UITabBarItem *tabBarItem4 = [[UITabBarItem alloc] initWithTitle:@"Cours"
+                                                              image:[UIImage imageNamed:@"96-book.png"]
                                                                 tag:0];
     UITabBarItem *tabBarItemCommande = [[UITabBarItem alloc] initWithTitle:@"Commandes"
-                                                              image:nil
+                                                              image:[UIImage imageNamed:@"167-upload-photo.png"]
                                                                 tag:0];
     
     
@@ -74,28 +77,15 @@
     CoursViewController *secondViewController = [[CoursViewController alloc]  initWithStyle:UITableViewStylePlain];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
     navigationController.title = @"Cours";
+    navigationController.tabBarItem = tabBarItem4;
     [navigationController setNavigationBarHidden:NO];
-    
-//    ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];                 
-//    thirdViewController.title = @"Commandes";
+ 
     
     CommandesViewController *commandeslist = [[CommandesViewController alloc] initWithStyle:UITableViewStylePlain];
     commandeslist.tabBarItem = tabBarItemCommande;
-
-    
-    FourthViewController *fourthViewController = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];                 
-    fourthViewController.title = @"Quatrième";
-    
-    FifthViewController *fifthViewController = [[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil];
-    UITabBarItem *tabBarItemFifth = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:5];
-    fifthViewController.tabBarItem = tabBarItemFifth;
-    
-    SixthViewController *sixthViewController = [[SixthViewController alloc] initWithNibName:@"SixthViewController" bundle:nil];
-    UITabBarItem *tabBarItemSixth = [[UITabBarItem alloc] initWithTitle:@"Sixième" image:[UIImage imageNamed:@"17-bar-chart.png"] tag:6];
-    sixthViewController.tabBarItem = tabBarItemSixth;
-    
+ 
     _tabBarController.viewControllers = [NSArray arrayWithObjects: navController,
-                                         winenavigationController, navigationController, commandeslist, fourthViewController, fifthViewController, sixthViewController, nil];
+                                         winenavigationController, navigationController, commandeslist,  nil];
     
     [_tabBarController.tabBar setSelectedImageTintColor:[UIColor grayColor]];
     

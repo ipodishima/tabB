@@ -7,5 +7,5 @@
 #import "Wine.h"
 
 @implementation Wine
-@synthesize name, age, domaine, apropos, image;
+@synthesize name, age, domaine, apropos, image,nombre;
 @end

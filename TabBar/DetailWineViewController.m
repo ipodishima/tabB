@@ -46,6 +46,7 @@
 
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 57.0, CGRectGetWidth(self.view.bounds)-20.0, 150.0)];
     _textView.textColor = [UIColor blackColor];
+ 
     _textView.font = [UIFont boldSystemFontOfSize:15.0];
     _textView.backgroundColor = [UIColor colorWithRed:204.00/255.0 green:1.0 blue:1.0 alpha:0.4];
      
@@ -81,7 +82,25 @@
     if (controllerToSelect.arrayOfWineToOrder == nil) {
     controllerToSelect.arrayOfWineToOrder = [NSMutableArray  arrayWithObjects:nil];
     }
-    [controllerToSelect.arrayOfWineToOrder  addObject:_wineAAfficher];
+ 
+    if (controllerToSelect.arrayOfWineToOrder.count == 0) {
+        _wineAAfficher.nombre = 0;
+        [controllerToSelect.arrayOfWineToOrder  addObject:_wineAAfficher];
+
+    } else {
+        for (int y =0 ; y < controllerToSelect.arrayOfWineToOrder.count; y++) {
+            Wine *wine = [controllerToSelect.arrayOfWineToOrder objectAtIndex:y ];
+            if (wine.name = _wineAAfficher.name)
+            {
+                wine.nombre++;
+                [controllerToSelect.arrayOfWineToOrder  replaceObjectAtIndex:y withObject:wine];
+                break;
+            }
+        
+        }
+
+    }
+       
  
   [controllerToSelect.tableView reloadData];
   
