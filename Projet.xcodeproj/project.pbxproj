@@ -361,7 +361,6 @@
 		E03C9800151A86590004D2FD = {
 			isa = PBXGroup;
 			children = (
-				821E62D116A48360008257A2 /* CoreLocation.framework */,
 				82063B981698CC1800C09A40 /* SDWebImage */,
 				9BFC82EB163930CF000C1600 /* Default-568h@2x.png */,
 				9BFC82CA16392F44000C1600 /* MSToolTips */,
@@ -383,6 +382,7 @@
 		E03C980E151A86590004D2FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				821E62D116A48360008257A2 /* CoreLocation.framework */,
 				824DC0DA169B56C700FD0448 /* Social.framework */,
 				82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */,
 				824DC0D6169B532800FD0448 /* Accounts.framework */,

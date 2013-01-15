@@ -67,15 +67,15 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (void) commander:(id)sender
-{ UITabBarController *tabController = self.tabBarController;
- //  AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
-  // [appDelegate.arrayOfWineToOrder addObject:_wineAAfficher];
-    
+{
+    UITabBarController *tabController = self.tabBarController;
+     
     CommandesViewController *controllerToSelect = nil;
     for (UIViewController *controller in tabController.viewControllers)
         if([controller isKindOfClass:NSClassFromString(@"CommandesViewController")])
         {
             controllerToSelect =(id) controller;
+            
             break; 
         }
     if (controllerToSelect.arrayOfWineToOrder == nil) {

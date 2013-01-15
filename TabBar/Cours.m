@@ -9,7 +9,7 @@
 #import "Cours.h"
 
 @implementation Cours
-@synthesize name, address;
+@synthesize name, address,lon,lat;
 @end
  
  

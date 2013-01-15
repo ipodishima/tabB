@@ -37,9 +37,17 @@
     [mapView setMapType:MKMapTypeStandard];
     [self.view addSubview:mapView];
     
-   // CLLocationManager *locationManager = [[CLLocationManager alloc]init];
-   //> [locationManager setDelegate:self];
+    CLLocationCoordinate2D annotationCoord;
     
+    annotationCoord.latitude =  _coursAAfficher.lat;
+  
+    annotationCoord.longitude = _coursAAfficher.lon;
+    
+    MKPointAnnotation *annotationPoint = [[MKPointAnnotation alloc] init];
+    annotationPoint.coordinate = annotationCoord;
+    annotationPoint.title = @"Microsoft";
+    annotationPoint.subtitle = @"Microsoft's headquarters";
+    [mapView addAnnotation:annotationPoint];
 }
 
 - (void)didReceiveMemoryWarning

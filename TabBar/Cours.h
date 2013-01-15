@@ -11,6 +11,7 @@
 @interface Cours : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *address;
+@property (nonatomic) float lat;
+@property (nonatomic) float lon;
 @end
 
- 

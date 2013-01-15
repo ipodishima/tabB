@@ -124,7 +124,8 @@
         // Set its properties from JSON 'object'
         c.name = [dic objectForKey:@"name"];
         c.address = [dic objectForKey:@"address"];
-  
+        c.lon = [[dic objectForKey:@"lon"] floatValue];
+        c.lat= [[dic objectForKey:@"lat"] floatValue];
         // Add it to the array
         [_arrayOfCours addObject:c];
         
