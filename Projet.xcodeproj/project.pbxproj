@@ -34,6 +34,10 @@
 		82E269B616A5E05300DE4B62 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B416A5E05200DE4B62 /* AboutViewController.xib */; };
 		82E269B816A5E3D200DE4B62 /* lepetit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B716A5E3D200DE4B62 /* lepetit.jpg */; };
 		82E269BA16A5E4DA00DE4B62 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E269B916A5E4DA00DE4B62 /* 112-group.png */; };
+		82E269C216A5E81A00DE4B62 /* YoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E269C016A5E81A00DE4B62 /* YoutubeViewController.m */; };
+		82E269C316A5E81A00DE4B62 /* YoutubeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E269C116A5E81A00DE4B62 /* YoutubeViewController.xib */; };
+		82E269CE16A5F10A00DE4B62 /* YouTubeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E269CB16A5F10700DE4B62 /* YouTubeManager.m */; };
+		82E269CF16A5F10A00DE4B62 /* YouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E269CD16A5F10900DE4B62 /* YouTubeVideo.m */; };
 		82E3D7E01698B5D8005B6FA1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E3D7DF1698B5D8005B6FA1 /* ImageIO.framework */; };
 		82EFA7DB169B4E4700A5AC91 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */; };
 		9B04F52A1624659500B0EA4D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F5281624659500B0EA4D /* ProfileViewController.m */; };
@@ -108,7 +112,7 @@
 		829417BB1691D2C3002F326D /* DetailWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailWineViewController.xib; path = TabBar/DetailWineViewController.xib; sourceTree = "<group>"; };
 		82CDF14716934E8500EA87AB /* Wine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
 		82CDF14816934E8500EA87AB /* Wine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
-		82CDF14A16934EA500EA87AB /* vin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vin.json; sourceTree = "<group>"; };
+		82CDF14A16934EA500EA87AB /* vin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vin.json; path = ../vin.json; sourceTree = "<group>"; };
 		82E075571698D0C7006B0523 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		82E112E01690C47100E7AD69 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = MSToolTips/MSToolTips/Contact.h; sourceTree = "<group>"; };
 		82E269AF16A5DF8700DE4B62 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "43-film-roll.png"; path = "TabBar/43-film-roll.png"; sourceTree = "<group>"; };
@@ -117,6 +121,13 @@
 		82E269B416A5E05200DE4B62 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		82E269B716A5E3D200DE4B62 /* lepetit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lepetit.jpg; sourceTree = "<group>"; };
 		82E269B916A5E4DA00DE4B62 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		82E269BF16A5E81A00DE4B62 /* YoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeViewController.h; sourceTree = "<group>"; };
+		82E269C016A5E81A00DE4B62 /* YoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeViewController.m; sourceTree = "<group>"; };
+		82E269C116A5E81A00DE4B62 /* YoutubeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoutubeViewController.xib; sourceTree = "<group>"; };
+		82E269CA16A5F10700DE4B62 /* YouTubeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YouTubeManager.h; path = MSToolTips/MSToolTips/YouTubeManager.h; sourceTree = "<group>"; };
+		82E269CB16A5F10700DE4B62 /* YouTubeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YouTubeManager.m; path = MSToolTips/MSToolTips/YouTubeManager.m; sourceTree = "<group>"; };
+		82E269CC16A5F10900DE4B62 /* YouTubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YouTubeVideo.h; path = MSToolTips/MSToolTips/YouTubeVideo.h; sourceTree = "<group>"; };
+		82E269CD16A5F10900DE4B62 /* YouTubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YouTubeVideo.m; path = MSToolTips/MSToolTips/YouTubeVideo.m; sourceTree = "<group>"; };
 		82E3D7DF1698B5D8005B6FA1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9B04F5271624659500B0EA4D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -265,6 +276,30 @@
 			name = MainView;
 			sourceTree = "<group>";
 		};
+		82E269BD16A5E6A200DE4B62 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				82CDF14A16934EA500EA87AB /* vin.json */,
+				9BC507CE16A45C4A008687E0 /* Cours.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		82E269BE16A5E7EE00DE4B62 /* YoutubeView */ = {
+			isa = PBXGroup;
+			children = (
+				82E269BF16A5E81A00DE4B62 /* YoutubeViewController.h */,
+				82E269CA16A5F10700DE4B62 /* YouTubeManager.h */,
+				82E269CB16A5F10700DE4B62 /* YouTubeManager.m */,
+				82E269CC16A5F10900DE4B62 /* YouTubeVideo.h */,
+				82E269CD16A5F10900DE4B62 /* YouTubeVideo.m */,
+				82E269C016A5E81A00DE4B62 /* YoutubeViewController.m */,
+				82E269C116A5E81A00DE4B62 /* YoutubeViewController.xib */,
+			);
+			name = YoutubeView;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		82FE496616A2C836002CA8E2 /* DetailWineView */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				821E62D016A47B06008257A2 /* DetailCoursView */,
-				9BC507CE16A45C4A008687E0 /* Cours.json */,
 				9B9CE7FC16A453C3003E26B6 /* CoursViewController.h */,
 				9B9CE7FD16A453C3003E26B6 /* CoursViewController.m */,
 				9BC507CA16A4553A008687E0 /* Cours.h */,
@@ -372,7 +406,6 @@
 				82CDF14716934E8500EA87AB /* Wine.h */,
 				82E112E01690C47100E7AD69 /* Contact.h */,
 				82CDF14816934E8500EA87AB /* Wine.m */,
-				82CDF14A16934EA500EA87AB /* vin.json */,
 				9B49991B163936EF000A24DA /* bouteille@2x.png */,
 				9B499915163936B7000A24DA /* WineViewController.m */,
 				9B4999141639369F000A24DA /* WineViewController.h */,
@@ -386,7 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				82063B981698CC1800C09A40 /* SDWebImage */,
-				9BFC82EB163930CF000C1600 /* Default-568h@2x.png */,
 				9BFC82CA16392F44000C1600 /* MSToolTips */,
 				E03C9815151A86590004D2FD /* TabBar */,
 				E03C9848151A8AF30004D2FD /* Images */,
@@ -426,6 +458,8 @@
 		E03C9815151A86590004D2FD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				82E269BE16A5E7EE00DE4B62 /* YoutubeView */,
+				82E269BD16A5E6A200DE4B62 /* JSON */,
 				82E269BC16A5E5C600DE4B62 /* MainView */,
 				82E269BB16A5E58F00DE4B62 /* AboutView */,
 				9B9CE7FF16A454CD003E26B6 /* CoursView */,
@@ -454,6 +488,7 @@
 		E03C9848151A8AF30004D2FD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC82EB163930CF000C1600 /* Default-568h@2x.png */,
 				82E269AF16A5DF8700DE4B62 /* 43-film-roll.png */,
 				82E269B916A5E4DA00DE4B62 /* 112-group.png */,
 				9B1BF2F616A59BD90062D8B8 /* 96-book.png */,
@@ -542,6 +577,7 @@
 				82E269B616A5E05300DE4B62 /* AboutViewController.xib in Resources */,
 				82E269B816A5E3D200DE4B62 /* lepetit.jpg in Resources */,
 				82E269BA16A5E4DA00DE4B62 /* 112-group.png in Resources */,
+				82E269C316A5E81A00DE4B62 /* YoutubeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +617,9 @@
 				821E62CD16A47AE2008257A2 /* DetailCoursViewController.m in Sources */,
 				9B1BD88D16A599F40062D8B8 /* WineCell.m in Sources */,
 				82E269B516A5E05300DE4B62 /* AboutViewController.m in Sources */,
+				82E269C216A5E81A00DE4B62 /* YoutubeViewController.m in Sources */,
+				82E269CE16A5F10A00DE4B62 /* YouTubeManager.m in Sources */,
+				82E269CF16A5F10A00DE4B62 /* YouTubeVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

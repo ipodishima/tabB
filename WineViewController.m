@@ -37,7 +37,7 @@
      [[DownloadManager shared] loadLocalFileName:@"vin" withDelegate:self];
     
     self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    self.title = @"Wine";
+    self.title = @"Vins";
     _carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 270.0, CGRectGetWidth(self.view.bounds), 111.0 /*depends strongly of values in overlay*/)];
     // these values in initWithFrame should be fixed, having hardcoded values is not great!
    
@@ -72,7 +72,7 @@
 }
 - (void) selectDetailWineController:(id)sender
 {
-    Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
+    Wine *w = [_arrayOfWine objectAtIndex:_carousel.currentItemIndex];
       NSLog(@"%@", w.name);
     DetailWineViewController *detailWineViewController =[[DetailWineViewController alloc] initWithNibName:@"DetailWineViewController" bundle:nil];
     detailWineViewController.texteAAfficher = w.apropos;
@@ -100,10 +100,10 @@
 
 - (void) downloadOperation:(DownloadOperation *)operation didLoadObject:(id)object
 {
-     [_arrayOfContacts removeAllObjects];
+     [_arrayOfWine removeAllObjects];
  
-    if (!_arrayOfContacts)
-        _arrayOfContacts = [NSMutableArray new];
+    if (!_arrayOfWine)
+        _arrayOfWine = [NSMutableArray new];
     
     // Now enumerate the json array
     for (NSDictionary *dic in object)
@@ -119,11 +119,11 @@
         w.image = [dic objectForKey:@"image"]  ;
         w.nombre = 1;
         // Add it to the array
-        [_arrayOfContacts addObject:w];
+        [_arrayOfWine addObject:w];
         
     }
     [_carousel reloadData];
-    Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
+    Wine *w = [_arrayOfWine objectAtIndex:_carousel.currentItemIndex];
     _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String ]];
     
  
@@ -133,7 +133,7 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return _arrayOfContacts.count;
+    return _arrayOfWine.count;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
@@ -141,8 +141,8 @@
     //create new view if no view is available for recycling
     if (view == nil)
     {
-        if([_arrayOfContacts count ] != 0){
-            Wine *w = [_arrayOfContacts objectAtIndex:index];
+        if([_arrayOfWine count ] != 0){
+            Wine *w = [_arrayOfWine objectAtIndex:index];
            
             if ([w.image length] != 0) {
                 UIImageView *imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
@@ -174,8 +174,8 @@
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel;
 {
-    if([_arrayOfContacts count ] != 0){
-         Wine *w = [_arrayOfContacts objectAtIndex:carousel.currentItemIndex];
+    if([_arrayOfWine count ] != 0){
+         Wine *w = [_arrayOfWine objectAtIndex:carousel.currentItemIndex];
         _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String]];
     }
     

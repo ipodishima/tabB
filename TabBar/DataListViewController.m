@@ -11,7 +11,7 @@
 #import "CustomCell.h"
 #import "ProfileViewController.h"
 #import "AboutViewController.h"
-
+#import "YoutubeViewController.h"
 @interface DataListViewController ()
 
 @end
@@ -145,7 +145,10 @@
                 ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
                 [self.navigationController pushViewController:profileViewController animated:YES];
                     }
-
+        case 1:   {
+           YoutubeViewController *youtubeVC = [[YoutubeViewController alloc] initWithNibName:@"YoutubeViewController" bundle:nil];
+            [self.navigationController pushViewController:youtubeVC animated:YES];
+        }
             break;
         case 2:   {
             AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];

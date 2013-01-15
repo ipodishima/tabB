@@ -13,6 +13,6 @@
 {
     iCarousel *_carousel;
     UITextView *_textView;
-    NSMutableArray *_arrayOfContacts;
+    NSMutableArray *_arrayOfWine;
 }
 @end

@@ -44,7 +44,7 @@
 //    firstViewController.title = @"Vins";
     
     WineViewController *wineVC = [[WineViewController alloc] init];
-    UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Wine"
+    UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Vins"
                                                               image:[UIImage imageNamed:@"142-wine-bottle.png"]
                                                                 tag:2];
     wineVC.tabBarItem = tabBarItem3;
