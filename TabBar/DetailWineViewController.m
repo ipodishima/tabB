@@ -84,16 +84,16 @@
     }
  
     if (controllerToSelect.arrayOfWineToOrder.count == 0) {
-        _wineAAfficher.nombre = 0;
+        _wineAAfficher.nombre = 1;
         [controllerToSelect.arrayOfWineToOrder  addObject:_wineAAfficher];
 
     } else {
-        for (int y =0 ; y < controllerToSelect.arrayOfWineToOrder.count; y++) {
+        for (int y =0 ; y <= controllerToSelect.arrayOfWineToOrder.count; y++) {
             Wine *wine = [controllerToSelect.arrayOfWineToOrder objectAtIndex:y ];
             if (wine.name = _wineAAfficher.name)
             {
                 wine.nombre++;
-                [controllerToSelect.arrayOfWineToOrder  replaceObjectAtIndex:y withObject:wine];
+               
                 break;
             }
         

@@ -2,8 +2,8 @@
 //  DataListViewController.h
 //  TableView
 //
-//  Created by Jérémy Lagrue on 09/03/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  wgarbaya
+//   
 //
 
 #import <UIKit/UIKit.h>

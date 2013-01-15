@@ -244,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				9B9CE7F516A40696003E26B6 /* CommandesViewController.h */,
+				9B1BD88B16A599F30062D8B8 /* WineCell.h */,
+				9B1BD88C16A599F30062D8B8 /* WineCell.m */,
 				9B9CE7F616A40696003E26B6 /* CommandesViewController.m */,
 			);
 			name = CommandesView;
@@ -397,8 +399,6 @@
 				9B2D6B9616244AF20038A459 /* CustomCell.h */,
 				9B2D6B9716244AF20038A459 /* CustomCell.m */,
 				9B2D6B9816244AF20038A459 /* DataListViewController.h */,
-				9B1BD88B16A599F30062D8B8 /* WineCell.h */,
-				9B1BD88C16A599F30062D8B8 /* WineCell.m */,
 				9B2D6B9916244AF20038A459 /* DataListViewController.m */,
 				9B04F5271624659500B0EA4D /* ProfileViewController.h */,
 				9B04F5281624659500B0EA4D /* ProfileViewController.m */,

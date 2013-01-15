@@ -2,8 +2,8 @@
 //  CustomCell.h
 //  TableView
 //
-//  Created by Jérémy Lagrue on 09/03/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by wgarbaya
+//  
 //
 
 #import <UIKit/UIKit.h>

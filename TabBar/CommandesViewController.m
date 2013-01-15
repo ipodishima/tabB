@@ -23,9 +23,14 @@
 }
 - (void)publishStory
 {
+    int i=0;
+    for (int y=0; y<_arrayOfWineToOrder.count; y++) {
+         Wine *wine =[_arrayOfWineToOrder objectAtIndex:y];
+        i = i + wine.nombre;
+    }
     NSString *texte = [NSString stringWithFormat:
               @"J'ai commandé %d bouteilles",
-                             _arrayOfWineToOrder.count];
+                             i];
     self.postParams =
     [[NSMutableDictionary alloc] initWithObjectsAndKeys:
      @"https://www.lepetitballon.com/", @"link",
@@ -153,12 +158,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"CustomCell";
+    static NSString *CellIdentifier = @"WineCell";
     
-    CustomCell *cell = (CustomCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    WineCell *cell = (WineCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
     {
-        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[WineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     
@@ -166,9 +171,9 @@
     
     // cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.imageView.image = image;
-    
-   cell.myLabel.text = [[_arrayOfWineToOrder objectAtIndex:[indexPath row]]name];
-    
+    Wine *wine =[_arrayOfWineToOrder objectAtIndex:[indexPath row]];
+   cell.myLabel.text = wine.name;
+    cell.nombre.text = [NSString stringWithFormat:@"%d  ",wine.nombre];
     return cell;
     
 }

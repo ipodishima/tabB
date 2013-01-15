@@ -11,6 +11,7 @@
 #import "CustomCell.h"
 #import "AppDelegate.h"
 #import "Wine.h"
+#import "WineCell.h"
 @interface CommandesViewController : UITableViewController
 {
 

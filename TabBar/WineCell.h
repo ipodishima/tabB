@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WineCell : UITableViewCell
-
+@property (nonatomic, strong) UILabel *myLabel;
+@property (nonatomic, strong) UILabel *nombre;
 @end

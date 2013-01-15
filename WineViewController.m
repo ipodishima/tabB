@@ -73,8 +73,7 @@
 - (void) selectDetailWineController:(id)sender
 {
     Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
-   
-
+      NSLog(@"%@", w.name);
     DetailWineViewController *detailWineViewController =[[DetailWineViewController alloc] initWithNibName:@"DetailWineViewController" bundle:nil];
     detailWineViewController.texteAAfficher = w.apropos;
     detailWineViewController.wineAAfficher = w;
@@ -126,12 +125,7 @@
     Wine *w = [_arrayOfContacts objectAtIndex:_carousel.currentItemIndex];
     _textView.text = [NSString stringWithFormat:@"%s",[w.apropos UTF8String ]];
     
-    // Try these
-    // [_arrayOfContacts sortUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES]]];
-    // [_arrayOfContacts sortUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"age" ascending:YES]]];
-    // Pretty cool no?
-    
-    // We are almost done. Please note that the parsing is made here just to avoid complexification. You should always create a model like YouTubeManager class which handles the parsing and give the data to the controller. Remember the MVC pattern
+ 
     
       } 
 #pragma mark - iCarousel methods
