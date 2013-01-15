@@ -33,11 +33,11 @@
 		82EFA7DB169B4E4700A5AC91 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EFA7DA169B4E4700A5AC91 /* AdSupport.framework */; };
 		9B04F52A1624659500B0EA4D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04F5281624659500B0EA4D /* ProfileViewController.m */; };
 		9B04F52B1624659500B0EA4D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B04F5291624659500B0EA4D /* ProfileViewController.xib */; };
-		9B1BD88316A58C700062D8B8 /* 142-wine-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BD88216A58C700062D8B8 /* 142-wine-bottle.png */; };
-		9B1BD88616A58D090062D8B8 /* 96-book.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BD88516A58D090062D8B8 /* 96-book.png */; };
-		9B1BD88816A58D2B0062D8B8 /* 167-upload-photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BD88716A58D2B0062D8B8 /* 167-upload-photo.png */; };
-		9B1BD88A16A58F740062D8B8 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BD88916A58F740062D8B8 /* 53-house.png */; };
 		9B1BD88D16A599F40062D8B8 /* WineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1BD88C16A599F30062D8B8 /* WineCell.m */; };
+		9B1BF2F716A59BD90062D8B8 /* 96-book.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BF2F616A59BD90062D8B8 /* 96-book.png */; };
+		9B1BF2F916A59BEC0062D8B8 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BF2F816A59BEC0062D8B8 /* 53-house.png */; };
+		9B1BF2FB16A59BF70062D8B8 /* 142-wine-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BF2FA16A59BF70062D8B8 /* 142-wine-bottle.png */; };
+		9B1BF2FD16A59C1C0062D8B8 /* 167-upload-photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1BF2FC16A59C1C0062D8B8 /* 167-upload-photo.png */; };
 		9B2D6BA316244E250038A459 /* DetailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2D6BA216244E250038A459 /* DetailListViewController.xib */; };
 		9B2D6BA616244E730038A459 /* DetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D6BA516244E730038A459 /* DetailListViewController.m */; };
 		9B2D6BA716244FA00038A459 /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D6B9916244AF20038A459 /* DataListViewController.m */; };
@@ -111,12 +111,12 @@
 		9B04F5271624659500B0EA4D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		9B04F5281624659500B0EA4D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		9B04F5291624659500B0EA4D /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		9B1BD88216A58C700062D8B8 /* 142-wine-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "142-wine-bottle.png"; path = "../../../Downloads/glyphish-icons/PNG icons/142-wine-bottle.png"; sourceTree = "<group>"; };
-		9B1BD88516A58D090062D8B8 /* 96-book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "96-book.png"; path = "../../../Downloads/glyphish-icons/PNG icons/96-book.png"; sourceTree = "<group>"; };
-		9B1BD88716A58D2B0062D8B8 /* 167-upload-photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "167-upload-photo.png"; path = "../../../Downloads/glyphish-icons/PNG icons/167-upload-photo.png"; sourceTree = "<group>"; };
-		9B1BD88916A58F740062D8B8 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "53-house.png"; path = "../../../Downloads/glyphish-icons 2/PNG icons/53-house.png"; sourceTree = "<group>"; };
 		9B1BD88B16A599F30062D8B8 /* WineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineCell.h; sourceTree = "<group>"; };
 		9B1BD88C16A599F30062D8B8 /* WineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineCell.m; sourceTree = "<group>"; };
+		9B1BF2F616A59BD90062D8B8 /* 96-book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "96-book.png"; sourceTree = "<group>"; };
+		9B1BF2F816A59BEC0062D8B8 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
+		9B1BF2FA16A59BF70062D8B8 /* 142-wine-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "142-wine-bottle.png"; sourceTree = "<group>"; };
+		9B1BF2FC16A59C1C0062D8B8 /* 167-upload-photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "167-upload-photo.png"; sourceTree = "<group>"; };
 		9B2D6B9616244AF20038A459 /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		9B2D6B9716244AF20038A459 /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		9B2D6B9816244AF20038A459 /* DataListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataListViewController.h; sourceTree = "<group>"; };
@@ -424,11 +424,11 @@
 		E03C9848151A8AF30004D2FD /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9B1BD88516A58D090062D8B8 /* 96-book.png */,
-				9B1BD88916A58F740062D8B8 /* 53-house.png */,
-				9B1BD88216A58C700062D8B8 /* 142-wine-bottle.png */,
-				9B1BD88716A58D2B0062D8B8 /* 167-upload-photo.png */,
+				9B1BF2F616A59BD90062D8B8 /* 96-book.png */,
+				9B1BF2FA16A59BF70062D8B8 /* 142-wine-bottle.png */,
+				9B1BF2F816A59BEC0062D8B8 /* 53-house.png */,
 				E03C9844151A8AED0004D2FD /* 17-bar-chart.png */,
+				9B1BF2FC16A59C1C0062D8B8 /* 167-upload-photo.png */,
 				E03C9845151A8AED0004D2FD /* 17-bar-chart@2x.png */,
 			);
 			name = Images;
@@ -468,6 +468,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = E03C9800151A86590004D2FD;
 			productRefGroup = E03C980C151A86590004D2FD /* Products */;
@@ -500,10 +501,10 @@
 				824DC0D9169B537300FD0448 /* FacebookSDKResources.bundle in Resources */,
 				9BC507CF16A45C4A008687E0 /* Cours.json in Resources */,
 				821E62CE16A47AE2008257A2 /* DetailCoursViewController.xib in Resources */,
-				9B1BD88316A58C700062D8B8 /* 142-wine-bottle.png in Resources */,
-				9B1BD88616A58D090062D8B8 /* 96-book.png in Resources */,
-				9B1BD88816A58D2B0062D8B8 /* 167-upload-photo.png in Resources */,
-				9B1BD88A16A58F740062D8B8 /* 53-house.png in Resources */,
+				9B1BF2F716A59BD90062D8B8 /* 96-book.png in Resources */,
+				9B1BF2F916A59BEC0062D8B8 /* 53-house.png in Resources */,
+				9B1BF2FB16A59BF70062D8B8 /* 142-wine-bottle.png in Resources */,
+				9B1BF2FD16A59C1C0062D8B8 /* 167-upload-photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +615,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabBar/Projet-Prefix.pch";
 				INFOPLIST_FILE = "TabBar/Projet-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/facebook-ios-sdk.build/Release-iphoneos/facebook-ios-sdk.build/Objects-normal/armv7\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/facebook-ios-sdk.build/Release-iphoneos/facebook-ios-sdk.build/Objects-normal/armv7s\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-universal\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
@@ -634,6 +643,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabBar/Projet-Prefix.pch";
 				INFOPLIST_FILE = "TabBar/Projet-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/facebook-ios-sdk.build/Release-iphoneos/facebook-ios-sdk.build/Objects-normal/armv7\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/facebook-ios-sdk.build/Release-iphoneos/facebook-ios-sdk.build/Objects-normal/armv7s\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/facebook-ios-sdk/build/Release-universal\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
