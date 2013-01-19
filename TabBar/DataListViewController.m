@@ -145,6 +145,7 @@
                 ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
                 [self.navigationController pushViewController:profileViewController animated:YES];
                     }
+            break;
         case 1:   {
            YoutubeViewController *youtubeVC = [[YoutubeViewController alloc] initWithNibName:@"YoutubeViewController" bundle:nil];
             [self.navigationController pushViewController:youtubeVC animated:YES];
