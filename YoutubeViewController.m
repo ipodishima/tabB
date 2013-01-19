@@ -39,15 +39,6 @@
     [[YouTubeManager shared] setDelegate:self];
     [[YouTubeManager shared] loadDataFromOffset:1];
 
-    
-    // This is one way to integrate Youtube video in your app.
-    // The other is kind of a hack around UIWebView (does not work on simulator though)
-    LBYouTubePlayerViewController *c = [[LBYouTubePlayerViewController alloc] initWithYouTubeID:_currentVideoDisplayed.youtubeID];
-    c.quality = LBYouTubePlayerQualityLarge;
-    c.view.frame = CGRectMake(60.0f, 60.0f, 200.0f, 200.0f);
-    c.delegate = self;
-    [self.view addSubview:c.view];
-
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -98,6 +89,16 @@
     [_activityIndicator stopAnimating];
     
     _currentVideoDisplayed = firstVideo;
+    
+    // This is one way to integrate Youtube video in your app.
+    // The other is kind of a hack around UIWebView (does not work on simulator though)
+    [_currentVideoController.view removeFromSuperview];
+    
+    _currentVideoController = [[LBYouTubePlayerViewController alloc] initWithYouTubeID:_currentVideoDisplayed.youtubeID];
+    _currentVideoController.quality = LBYouTubePlayerQualityLarge;
+    _currentVideoController.view.frame = CGRectMake(60.0f, 60.0f, 200.0f, 200.0f);
+    _currentVideoController.delegate = self;
+    [self.view addSubview:_currentVideoController.view];
 }
 
 - (void)viewDidUnload

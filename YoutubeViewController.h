@@ -12,6 +12,7 @@
 @class YouTubeVideo;
 @interface YoutubeViewController : UIViewController<YouTubeManagerDelegate, LBYouTubePlayerControllerDelegate>{
      YouTubeVideo *_currentVideoDisplayed;
+    LBYouTubePlayerViewController *_currentVideoController;
 }
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
